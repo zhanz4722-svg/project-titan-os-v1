@@ -1,0 +1,102 @@
+{
+  "meta": {"date": "2026-07-29", "week": "Week03", "day": "Day3", "version": "3.1", "timezone": "Europe/Berlin"},
+  "morning_check": {"weight_kg": 71.1, "waist_cm": 76.0, "training_readiness": 9.0, "muscle_recovery": null, "stomach_status": null, "mental_status": null},
+  "sleep": {
+    "time_in_bed_minutes": 449,
+    "sleep_minutes": 430,
+    "efficiency_percent": 95,
+    "score": 80,
+    "heart_rate_bpm": 56,
+    "respiratory_rate": 13,
+    "deep_minutes": 160,
+    "light_minutes": 206,
+    "rem_minutes": 64,
+    "awakenings": 3,
+    "awake_minutes": 10
+  },
+  "meals": {
+    "breakfast": [
+      {"food": "黑面包", "quantity": "200 g"},
+      {"food": "黄椒", "quantity": "1 个"},
+      {"food": "车厘子", "quantity": "100 g"},
+      {"food": "鸡蛋", "quantity": "2 个"},
+      {"food": "鸡肉火腿", "quantity": "60 g"},
+      {"food": "蛋白奶昔", "quantity": "35 g 蛋白质"},
+      {"food": "咖啡", "quantity": "1 份"}
+    ],
+    "lunch": [
+      {"food": "生米", "quantity": "140 g"},
+      {"food": "去骨去皮鸡腿肉", "quantity": "250 g"},
+      {"food": "蔬菜", "quantity": "250 g"}
+    ],
+    "dinner": [
+      {"food": "芝麻圈", "quantity": "100 g"},
+      {"food": "菠菜卷", "quantity": "120 g"},
+      {"food": "黄瓜", "quantity": "200 g"},
+      {"food": "高蛋白奶昔", "quantity": "35 g 蛋白质"},
+      {"food": "车厘子", "quantity": "150 g"}
+    ]
+  },
+  "training": {
+    "start_time": "15:36", "end_time": "16:52", "body_parts": ["胸部", "三头"],
+    "exercises": [
+      {"name": "上斜哑铃卧推", "sets": [
+        {"weight_kg": 12, "reps": 15, "type": "warmup", "rpe": null, "note": "热身"},
+        {"weight_kg": 22, "reps": 12, "type": "working", "rpe": 8, "note": "轻松"},
+        {"weight_kg": 22, "reps": 12, "type": "working", "rpe": 9, "note": "最后2次困难"},
+        {"weight_kg": 22, "reps": 12, "type": "working", "rpe": 9.5, "note": "最后2次接近力竭"}
+      ]},
+      {"name": "上斜推胸机", "sets": [
+        {"weight_kg": 40, "reps": 12, "type": "working", "rpe": 8, "note": "最后1次稍难"},
+        {"weight_kg": 40, "reps": 12, "type": "working", "rpe": 10, "note": "最后1次力竭"},
+        {"weight_kg": 40, "reps": 12, "type": "working", "rpe": 10, "note": "最后1次力竭"}
+      ]},
+      {"name": "Pec Deck（蝴蝶夹胸）", "sets": [
+        {"weight_kg": 32, "reps": 15, "type": "warmup", "rpe": null, "note": "非常轻松"},
+        {"weight_kg": 59, "reps": 12, "type": "working", "rpe": 8, "note": "胸部紧绷"},
+        {"weight_kg": 59, "reps": 12, "type": "working", "rpe": 8, "note": "仅胸部紧绷"},
+        {"weight_kg": 59, "reps": 12, "type": "working", "rpe": 7.5, "note": "轻松"}
+      ]},
+      {"name": "绳索下压", "sets": [
+        {"weight_kg": 11.3, "reps": 15, "type": "warmup", "rpe": null, "note": "轻松"},
+        {"weight_kg": 15.8, "reps": 15, "type": "working", "rpe": 8.5, "note": "最后2次吃力"},
+        {"weight_kg": 15.8, "reps": 13, "type": "working", "rpe": 9.5, "note": "后3次接近力竭"},
+        {"weight_kg": 15.8, "reps": 12, "type": "working", "rpe": 9.5, "note": "最后2次吃力"}
+      ]},
+      {"name": "绳索过顶臂屈伸", "sets": [
+        {"weight_kg": 11.3, "reps": 15, "type": "warmup", "rpe": null, "note": "轻松"},
+        {"weight_kg": 15.8, "reps": 13, "type": "working", "rpe": 10, "note": "最后1次力竭"},
+        {"weight_kg": 15.8, "reps": 11, "type": "working", "rpe": 10, "note": "最后1次力竭"},
+        {"weight_kg": 15.8, "reps": 10, "type": "working", "rpe": 10, "note": "最后1次力竭"}
+      ]}
+    ]
+  },
+  "nutrition": {
+    "estimated": true,
+    "calories_kcal": 2550,
+    "protein_g": 163,
+    "carbs_g": 270,
+    "fat_g": 75,
+    "targets": {"calories_kcal": 3000, "protein_g": 180, "carbs_g": 350, "fat_g": 70}
+  },
+  "history": [
+    {"date": "2026-07-27", "weight_kg": 71.7, "waist_cm": 76.0, "sleep_minutes": 407},
+    {"date": "2026-07-28", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 419},
+    {"date": "2026-07-29", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 430}
+  ],
+  "database_progress": {
+    "Sleep": "LOCKED", "Morning Check": "LOCKED", "Breakfast": "LOCKED", "Lunch": "LOCKED", "Training": "LOCKED", "Dinner": "LOCKED", "Daily Summary": "PENDING"
+  },
+  "daily_summary": {
+    "training": "已完成（胸部 + 三头）",
+    "diet": "已完成",
+    "body": "状态良好",
+    "tomorrow": "按计划进行"
+  },
+  "discovery": {
+    "training": "胸部重量稳定，三头强度充足",
+    "diet": "能量摄入充足，搭配合理",
+    "body": "肌肉充血感良好，无明显不适"
+  },
+  "notes": null
+}

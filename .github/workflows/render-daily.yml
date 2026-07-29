@@ -1,0 +1,80 @@
+name: Render Daily Dashboard
+
+on:
+  workflow_dispatch:
+    inputs:
+      data_file:
+        description: "Optional JSON file to render, for example data/2026-07-29.json"
+        required: false
+        type: string
+  push:
+    paths:
+      - "data/**/*.json"
+      - "schema/**"
+      - "dashboard/**"
+      - "engine/**"
+      - "requirements.txt"
+      - ".github/workflows/render-daily.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Validate and render dashboards
+        shell: bash
+        env:
+          DATA_FILE: ${{ github.event_name == 'workflow_dispatch' && inputs.data_file || '' }}
+        run: |
+          set -euo pipefail
+          if [ -n "$DATA_FILE" ]; then
+            files="$DATA_FILE"
+          else
+            files="$(find data -maxdepth 1 -name '*.json' | sort)"
+          fi
+
+          for file in $files; do
+            echo "Rendering $file"
+            python engine/validate.py "$file"
+            python engine/render.py "$file"
+          done
+
+      - name: Upload rendered outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: project-titan-rendered-output
+          path: |
+            output/png/*.png
+            output/pdf/*.pdf
+
+      - name: Commit rendered outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -n "$(git status --porcelain output)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add output/png output/pdf
+            git commit -m "Render PROJECT TITAN daily outputs"
+            git push
+          else
+            echo "No rendered output changes to commit."
+          fi

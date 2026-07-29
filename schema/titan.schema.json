@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://project-titan.local/schema/titan-v1.0.json",
+  "title": "Titan Schema v1.0",
+  "type": "object",
+  "required": ["meta", "morning_check", "sleep", "meals", "training", "nutrition", "history", "database_progress"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["date", "week", "day", "version", "timezone"],
+      "properties": {
+        "date": {"type": "string", "format": "date"},
+        "week": {"type": "string"},
+        "day": {"type": "string"},
+        "version": {"const": "3.1"},
+        "timezone": {"const": "Europe/Berlin"}
+      }
+    },
+    "morning_check": {
+      "type": "object",
+      "required": ["weight_kg", "waist_cm", "training_readiness"],
+      "properties": {
+        "weight_kg": {"type": "number", "minimum": 30, "maximum": 250},
+        "waist_cm": {"type": "number", "minimum": 40, "maximum": 200},
+        "training_readiness": {"type": "number", "minimum": 0, "maximum": 10},
+        "muscle_recovery": {"type": ["string", "null"]},
+        "stomach_status": {"type": ["string", "null"]},
+        "mental_status": {"type": ["string", "null"]}
+      }
+    },
+    "sleep": {
+      "type": "object",
+      "required": ["time_in_bed_minutes", "sleep_minutes", "efficiency_percent", "score", "heart_rate_bpm", "respiratory_rate", "deep_minutes", "light_minutes", "rem_minutes", "awakenings", "awake_minutes"],
+      "properties": {
+        "time_in_bed_minutes": {"type": "integer", "minimum": 0},
+        "sleep_minutes": {"type": "integer", "minimum": 0},
+        "efficiency_percent": {"type": "number", "minimum": 0, "maximum": 100},
+        "score": {"type": "number", "minimum": 0, "maximum": 100},
+        "heart_rate_bpm": {"type": "number", "minimum": 20, "maximum": 220},
+        "respiratory_rate": {"type": "number", "minimum": 5, "maximum": 50},
+        "deep_minutes": {"type": "integer", "minimum": 0},
+        "light_minutes": {"type": "integer", "minimum": 0},
+        "rem_minutes": {"type": "integer", "minimum": 0},
+        "awakenings": {"type": "integer", "minimum": 0},
+        "awake_minutes": {"type": "integer", "minimum": 0}
+      }
+    },
+    "meals": {
+      "type": "object",
+      "required": ["breakfast", "lunch", "dinner"],
+      "properties": {
+        "breakfast": {"$ref": "#/$defs/meal"},
+        "lunch": {"$ref": "#/$defs/meal"},
+        "dinner": {"$ref": "#/$defs/meal"}
+      }
+    },
+    "training": {
+      "type": "object",
+      "required": ["start_time", "end_time", "body_parts", "exercises"],
+      "properties": {
+        "start_time": {"type": "string", "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"},
+        "end_time": {"type": "string", "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"},
+        "body_parts": {"type": "array", "items": {"type": "string"}},
+        "exercises": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "sets"],
+            "properties": {
+              "name": {"type": "string"},
+              "sets": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["weight_kg", "reps", "type"],
+                  "properties": {
+                    "weight_kg": {"type": "number", "minimum": 0},
+                    "reps": {"type": "integer", "minimum": 1},
+                    "type": {"enum": ["warmup", "working"]},
+                    "rpe": {"type": ["number", "null"], "minimum": 0, "maximum": 10},
+                    "note": {"type": ["string", "null"]}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "nutrition": {
+      "type": "object",
+      "required": ["estimated", "calories_kcal", "protein_g", "carbs_g", "fat_g", "targets"],
+      "properties": {
+        "estimated": {"type": "boolean"},
+        "calories_kcal": {"type": ["number", "null"]},
+        "protein_g": {"type": ["number", "null"]},
+        "carbs_g": {"type": ["number", "null"]},
+        "fat_g": {"type": ["number", "null"]},
+        "targets": {
+          "type": "object",
+          "required": ["calories_kcal", "protein_g", "carbs_g", "fat_g"],
+          "properties": {
+            "calories_kcal": {"type": "number"},
+            "protein_g": {"type": "number"},
+            "carbs_g": {"type": "number"},
+            "fat_g": {"type": "number"}
+          }
+        }
+      }
+    },
+    "history": {"type": "array"},
+    "database_progress": {"type": "object"},
+    "daily_summary": {"type": "object"},
+    "discovery": {"type": "object"},
+    "notes": {"type": ["string", "null"]}
+  },
+  "$defs": {
+    "meal": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["food", "quantity"],
+        "properties": {
+          "food": {"type": "string"},
+          "quantity": {"type": "string"}
+        }
+      }
+    }
+  }
+}
