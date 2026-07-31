@@ -17,17 +17,32 @@ def validate_data(data: dict) -> None:
         raise ValueError("Titan Schema validation failed:\n" + details)
 
     sleep = data["sleep"]
-    stage_sum = sleep["deep_minutes"] + sleep["light_minutes"] + sleep["rem_minutes"]
-    if abs(stage_sum - sleep["sleep_minutes"]) > 5:
-        raise ValueError(f"Sleep stages ({stage_sum} min) do not match total sleep ({sleep['sleep_minutes']} min).")
+    stage_values = [sleep.get("deep_minutes"), sleep.get("light_minutes"), sleep.get("rem_minutes")]
+    if all(v is not None for v in stage_values):
+        stage_sum = sum(stage_values)
+        if abs(stage_sum - sleep["sleep_minutes"]) > 5:
+            raise ValueError(f"Sleep stages ({stage_sum} min) do not match total sleep ({sleep['sleep_minutes']} min).")
 
-    sh, sm = map(int, data["training"]["start_time"].split(":"))
-    eh, em = map(int, data["training"]["end_time"].split(":"))
-    if eh * 60 + em <= sh * 60 + sm:
-        raise ValueError("Training end_time must be after start_time on the same day.")
+    training = data["training"]
+    if training.get("performed") is not False:
+        sh, sm = map(int, training["start_time"].split(":"))
+        eh, em = map(int, training["end_time"].split(":"))
+        if eh * 60 + em <= sh * 60 + sm:
+            raise ValueError("Training end_time must be after start_time on the same day.")
+        if not training.get("exercises"):
+            raise ValueError("Training day must include at least one exercise.")
 
+        for exercise in training["exercises"]:
+            if not exercise.get("sets"):
+                raise ValueError(f"Exercise '{exercise['name']}' has no sets.")
+            for index, set_data in enumerate(exercise["sets"], start=1):
+                has_reps = any(set_data.get(key) is not None for key in ("reps", "left_reps", "right_reps"))
+                if not has_reps:
+                    raise ValueError(f"Exercise '{exercise['name']}' set {index} has no reps recorded.")
+
+    meal_notes = data.get("meal_notes", {})
     for meal_name, items in data["meals"].items():
-        if not items:
+        if not items and not meal_notes.get(meal_name):
             raise ValueError(f"Meal '{meal_name}' is empty.")
 
 

@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "date": "2026-07-31",
+    "week": "Week03",
+    "day": "Day6",
+    "version": "3.1",
+    "timezone": "Europe/Berlin"
+  },
+  "morning_check": {
+    "weight_kg": 71.0,
+    "waist_cm": 76.0,
+    "training_readiness": null,
+    "muscle_recovery": null,
+    "stomach_status": null,
+    "mental_status": null
+  },
+  "sleep": {
+    "time_in_bed_minutes": 389,
+    "sleep_minutes": 380,
+    "sleep_latency_minutes": 9,
+    "efficiency_percent": 98,
+    "score": 86,
+    "heart_rate_bpm": 55,
+    "respiratory_rate": 13,
+    "deep_minutes": 126,
+    "light_minutes": 195,
+    "rem_minutes": 59,
+    "awakenings": 0,
+    "awake_minutes": 0
+  },
+  "meals": {
+    "breakfast": [
+      {"food": "黑面包", "quantity": "350 g"},
+      {"food": "蛋白奶昔", "quantity": "35 g Protein"},
+      {"food": "黄瓜", "quantity": "300 g"},
+      {"food": "蓝莓", "quantity": "125 g"},
+      {"food": "杏仁", "quantity": "20 g"},
+      {"food": "水煮蛋", "quantity": "2 个"},
+      {"food": "黑咖啡", "quantity": "300 mL"}
+    ],
+    "lunch": [],
+    "dinner": [
+      {"food": "啤酒", "quantity": "500 mL"},
+      {"food": "干意面", "quantity": "150 g（生重）"},
+      {"food": "番茄牛肉酱（混合成品）", "quantity": "约400 g"},
+      {"food": "菠菜（水煮）", "quantity": "100 g"}
+    ]
+  },
+  "meal_notes": {
+    "lunch": "今天采用两餐制，不单独记录午餐。",
+    "dinner": "番茄牛肉酱按混合成品约400 g记录，包含牛肉末、番茄、彩椒等；不拆分单项重量。"
+  },
+  "training": {
+    "status": "LOCKED",
+    "type": "Shoulders + Biceps + Forearms",
+    "performed": true,
+    "start_time": "16:33",
+    "end_time": "17:53",
+    "duration_minutes": 80,
+    "body_parts": ["肩部", "二头", "前臂"],
+    "notes": "Week03 Day6 正式训练记录，逐组保存重量与次数。",
+    "exercises": [
+      {
+        "name": "哑铃侧平举",
+        "body_part": "肩部",
+        "target": "肩中束",
+        "total_sets": 5,
+        "working_sets": 4,
+        "sets": [
+          {"set_no": 1, "weight_kg": 4, "reps": 15, "type": "warmup", "rpe": null, "note": "热身"},
+          {"set_no": 2, "weight_kg": 6, "reps": 15, "type": "working", "rpe": null, "note": null},
+          {"set_no": 3, "weight_kg": 6, "reps": 15, "type": "working", "rpe": null, "note": null},
+          {"set_no": 4, "weight_kg": 6, "reps": 15, "type": "working", "rpe": null, "note": null},
+          {"set_no": 5, "weight_kg": 6, "reps": 15, "type": "working", "rpe": null, "note": null}
+        ]
+      },
+      {
+        "name": "坐姿哑铃推举",
+        "body_part": "肩部",
+        "target": "肩前束",
+        "total_sets": 4,
+        "working_sets": 3,
+        "sets": [
+          {"set_no": 1, "weight_kg": 12, "reps": 15, "type": "warmup", "rpe": null, "note": "热身"},
+          {"set_no": 2, "weight_kg": 16, "reps": 12, "type": "working", "rpe": null, "note": null},
+          {"set_no": 3, "weight_kg": 16, "reps": 12, "type": "working", "rpe": null, "note": null},
+          {"set_no": 4, "weight_kg": 16, "reps": 10, "type": "working", "rpe": null, "note": null}
+        ]
+      },
+      {
+        "name": "反向蝴蝶机",
+        "body_part": "肩部",
+        "target": "肩后束",
+        "total_sets": 4,
+        "working_sets": 3,
+        "sets": [
+          {"set_no": 1, "weight_kg": 32, "reps": 15, "type": "warmup", "rpe": null, "note": "热身"},
+          {"set_no": 2, "weight_kg": 52, "reps": 15, "type": "working", "rpe": null, "note": null},
+          {"set_no": 3, "weight_kg": 52, "reps": 15, "type": "working", "rpe": null, "note": null},
+          {"set_no": 4, "weight_kg": 52, "reps": 12, "type": "working", "rpe": null, "note": null}
+        ]
+      },
+      {
+        "name": "EZ杠弯举",
+        "body_part": "二头",
+        "target": "二头",
+        "total_sets": 3,
+        "working_sets": 3,
+        "sets": [
+          {"set_no": 1, "weight_kg": 25, "reps": 15, "type": "working", "rpe": null, "note": null},
+          {"set_no": 2, "weight_kg": 20, "reps": 12, "type": "working", "rpe": null, "note": null},
+          {"set_no": 3, "weight_kg": 20, "reps": 12, "type": "working", "rpe": null, "note": null}
+        ]
+      },
+      {
+        "name": "锤式弯举",
+        "body_part": "二头",
+        "target": "肱肌/肱桡肌",
+        "total_sets": 3,
+        "working_sets": 3,
+        "sets": [
+          {"set_no": 1, "left_weight_kg": 12, "left_reps": 10, "right_weight_kg": 12, "right_reps": 10, "type": "working", "rpe": null, "note": "左右手分别记录"},
+          {"set_no": 2, "left_weight_kg": 12, "left_reps": 10, "right_weight_kg": 12, "right_reps": 10, "type": "working", "rpe": null, "note": "左右手分别记录"},
+          {"set_no": 3, "left_weight_kg": 12, "left_reps": 10, "right_weight_kg": 12, "right_reps": 10, "type": "working", "rpe": null, "note": "左右手分别记录"}
+        ]
+      },
+      {
+        "name": "EZ杠腕弯举",
+        "body_part": "前臂",
+        "target": "前臂",
+        "total_sets": 2,
+        "working_sets": 2,
+        "notes": "每组包含正握与反握。",
+        "sets": [
+          {"set_no": 1, "movement": "正握", "weight_kg": null, "reps": 10, "type": "working", "working_set": true, "rpe": null, "note": null},
+          {"set_no": 1, "movement": "反握", "weight_kg": null, "reps": 20, "type": "working", "working_set": true, "rpe": null, "note": null},
+          {"set_no": 2, "movement": "正握", "weight_kg": null, "reps": 15, "type": "working", "working_set": true, "rpe": null, "note": null},
+          {"set_no": 2, "movement": "反握", "weight_kg": null, "reps": 30, "type": "working", "working_set": true, "rpe": null, "note": null}
+        ]
+      }
+    ]
+  },
+  "training_volume": [
+    {"muscle": "肩中束", "exercise": "侧平举", "working_sets": 4},
+    {"muscle": "肩前束", "exercise": "肩推", "working_sets": 3},
+    {"muscle": "肩后束", "exercise": "反向蝴蝶机", "working_sets": 3},
+    {"muscle": "二头", "exercise": "EZ杠弯举", "working_sets": 3},
+    {"muscle": "肱肌/肱桡肌", "exercise": "锤式弯举", "working_sets": 3},
+    {"muscle": "前臂", "exercise": "腕弯举", "working_sets": 2}
+  ],
+  "nutrition": {
+    "estimated": false,
+    "calories_kcal": null,
+    "protein_g": null,
+    "carbs_g": null,
+    "fat_g": null,
+    "targets": {"calories_kcal": 3000, "protein_g": 180, "carbs_g": 350, "fat_g": 70},
+    "note": "今日不做额外营养估算，仅锁定食物与数量。"
+  },
+  "history": [
+    {"date": "2026-07-27", "weight_kg": 71.7, "waist_cm": 76.0, "sleep_minutes": 407},
+    {"date": "2026-07-28", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 419},
+    {"date": "2026-07-29", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 430},
+    {"date": "2026-07-31", "weight_kg": 71.0, "waist_cm": 76.0, "sleep_minutes": 380}
+  ],
+  "database_progress": {
+    "Sleep": "LOCKED",
+    "Morning Check": "LOCKED",
+    "Breakfast": "LOCKED",
+    "Lunch": "SKIPPED",
+    "Training": "LOCKED",
+    "Dinner": "LOCKED",
+    "Daily Summary": "LOCKED"
+  },
+  "recovery_index": {
+    "status": "PENDING",
+    "note": "Recovery Index 等 Weekly Audit 时结合本周数据统一计算。"
+  },
+  "daily_summary": {
+    "training": "已完成（肩部 + 二头 + 前臂），训练时长 1h20m。",
+    "diet": "两餐制；早餐与晚餐已锁定，不做额外营养估算。",
+    "body": "空腹体重 71.0 kg，空腹腰围 76.0 cm，睡眠评分 86。",
+    "tomorrow": "等待周末 Weekly Audit 后判断动作加重量或维持。"
+  },
+  "discovery": {
+    "training": "逐组训练数据已完整记录，可用于 Working Weight Database 与周工作组统计。",
+    "diet": "番茄牛肉酱按混合成品约400 g记录，避免拆分无精确称重的食材。",
+    "body": "体重与腰围稳定，睡眠分期完整。"
+  },
+  "notes": "Week03 Day6 正式归档。"
+}

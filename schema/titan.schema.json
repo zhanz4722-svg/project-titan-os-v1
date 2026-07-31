@@ -22,7 +22,7 @@
       "properties": {
         "weight_kg": {"type": "number", "minimum": 30, "maximum": 250},
         "waist_cm": {"type": "number", "minimum": 40, "maximum": 200},
-        "training_readiness": {"type": "number", "minimum": 0, "maximum": 10},
+        "training_readiness": {"type": ["number", "null"], "minimum": 0, "maximum": 10},
         "muscle_recovery": {"type": ["string", "null"]},
         "stomach_status": {"type": ["string", "null"]},
         "mental_status": {"type": ["string", "null"]}
@@ -42,7 +42,8 @@
         "light_minutes": {"type": "integer", "minimum": 0},
         "rem_minutes": {"type": "integer", "minimum": 0},
         "awakenings": {"type": "integer", "minimum": 0},
-        "awake_minutes": {"type": "integer", "minimum": 0}
+        "awake_minutes": {"type": "integer", "minimum": 0},
+        "sleep_latency_minutes": {"type": ["integer", "null"], "minimum": 0}
       }
     },
     "meals": {
@@ -58,8 +59,13 @@
       "type": "object",
       "required": ["start_time", "end_time", "body_parts", "exercises"],
       "properties": {
+        "status": {"type": "string"},
+        "type": {"type": "string"},
+        "performed": {"type": "boolean"},
         "start_time": {"type": "string", "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"},
         "end_time": {"type": "string", "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"},
+        "duration_minutes": {"type": ["integer", "null"], "minimum": 0},
+        "notes": {"type": ["string", "null"]},
         "body_parts": {"type": "array", "items": {"type": "string"}},
         "exercises": {
           "type": "array",
@@ -68,15 +74,27 @@
             "required": ["name", "sets"],
             "properties": {
               "name": {"type": "string"},
+              "body_part": {"type": ["string", "null"]},
+              "target": {"type": ["string", "null"]},
+              "total_sets": {"type": ["integer", "null"], "minimum": 0},
+              "working_sets": {"type": ["integer", "null"], "minimum": 0},
+              "notes": {"type": ["string", "null"]},
               "sets": {
                 "type": "array",
                 "items": {
                   "type": "object",
-                  "required": ["weight_kg", "reps", "type"],
+                  "required": ["type"],
                   "properties": {
-                    "weight_kg": {"type": "number", "minimum": 0},
-                    "reps": {"type": "integer", "minimum": 1},
+                    "set_no": {"type": ["integer", "null"], "minimum": 1},
+                    "movement": {"type": ["string", "null"]},
+                    "weight_kg": {"type": ["number", "null"], "minimum": 0},
+                    "reps": {"type": ["integer", "null"], "minimum": 1},
+                    "left_weight_kg": {"type": ["number", "null"], "minimum": 0},
+                    "left_reps": {"type": ["integer", "null"], "minimum": 1},
+                    "right_weight_kg": {"type": ["number", "null"], "minimum": 0},
+                    "right_reps": {"type": ["integer", "null"], "minimum": 1},
                     "type": {"enum": ["warmup", "working"]},
+                    "working_set": {"type": ["boolean", "null"]},
                     "rpe": {"type": ["number", "null"], "minimum": 0, "maximum": 10},
                     "note": {"type": ["string", "null"]}
                   }
@@ -110,6 +128,9 @@
     },
     "history": {"type": "array"},
     "database_progress": {"type": "object"},
+    "meal_notes": {"type": "object"},
+    "training_volume": {"type": "array"},
+    "recovery_index": {"type": ["object", "null"]},
     "daily_summary": {"type": "object"},
     "discovery": {"type": "object"},
     "notes": {"type": ["string", "null"]}

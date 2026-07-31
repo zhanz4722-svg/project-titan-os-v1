@@ -50,6 +50,17 @@ python engine\render.py data\2026-07-29.json
 data/2026-07-29.json
 ```
 
+## 每日 JSON 记录标准
+
+每日 JSON 是 PROJECT TITAN 的数据库源数据，不是图片，也不是简化摘要。正式归档时应尽量保存：
+
+- Morning Check：体重、腰围、训练准备度和主观状态。
+- Sleep：评分、实际睡眠、卧床时间、入睡时间、清醒次数、深睡、浅睡、REM、心率、呼吸率。
+- Meals：早餐、午餐、晚餐的食物和数量；两餐制可用空数组并在 `meal_notes` 说明。
+- Training：开始/结束时间、训练部位、每个动作、每一组重量和次数；左右手或正反握可以逐组保存。
+- Training Volume：按肌群汇总本日工作组数，用于后续 Weekly Audit 和 Working Weight Database。
+- Nutrition：没有精确估算时保持 `null`，并用 `estimated: false` 说明不做额外估算。
+
 ## 核心原则
 
 1. 模板固定：普通每日记录只改 JSON，不改 HTML/CSS。
