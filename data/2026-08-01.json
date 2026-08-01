@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "date": "2026-08-01",
+    "week": "Week03",
+    "day": "Day7",
+    "version": "3.1",
+    "timezone": "Europe/Berlin"
+  },
+  "morning_check": {
+    "weight_kg": null,
+    "waist_cm": null,
+    "training_readiness": null,
+    "muscle_recovery": null,
+    "stomach_status": null,
+    "mental_status": null
+  },
+  "sleep": {
+    "time_in_bed_minutes": 417,
+    "sleep_minutes": 370,
+    "sleep_latency_minutes": 10,
+    "efficiency_percent": 88,
+    "score": 68,
+    "heart_rate_bpm": 58,
+    "respiratory_rate": 15,
+    "deep_minutes": 145,
+    "light_minutes": 173,
+    "rem_minutes": 52,
+    "awakenings": 1,
+    "awake_minutes": 37
+  },
+  "meals": {
+    "breakfast": [
+      {"food": "黑面包", "quantity": "200 g"},
+      {"food": "Skyr 高蛋白酸奶", "quantity": "1盒（45 g 蛋白）"},
+      {"food": "鸡肉火腿", "quantity": "50 g"},
+      {"food": "黄瓜", "quantity": "300 g"},
+      {"food": "车厘子", "quantity": "约100 g"},
+      {"food": "煎蛋", "quantity": "2 个"}
+    ],
+    "lunch": [
+      {"food": "生米", "quantity": "150 g"},
+      {"food": "烩菜", "quantity": "约半锅"}
+    ],
+    "dinner": [
+      {"food": "啤酒", "quantity": "330 mL"},
+      {"food": "桃子", "quantity": "1 个"}
+    ]
+  },
+  "meal_notes": {
+    "lunch": "烩菜原配方留档：肉丸子500 g、白菜800 g、粉条200 g、五花肉250 g、豆腐250 g。",
+    "dinner": "晚餐未安排正餐，仅补充水果和少量酒精。"
+  },
+  "training": {
+    "status": "LOCKED",
+    "type": "Rest Day",
+    "performed": false,
+    "start_time": null,
+    "end_time": null,
+    "duration_minutes": 0,
+    "body_parts": ["恢复日"],
+    "notes": "恢复日，无力量训练。",
+    "exercises": []
+  },
+  "training_volume": [
+    {"muscle": "恢复日", "exercise": "Rest Day", "working_sets": 0}
+  ],
+  "nutrition": {
+    "estimated": false,
+    "calories_kcal": null,
+    "protein_g": null,
+    "carbs_g": null,
+    "fat_g": null,
+    "targets": {"calories_kcal": 3000, "protein_g": 180, "carbs_g": 350, "fat_g": 70},
+    "note": "今日不做额外营养估算，仅锁定食物与数量。"
+  },
+  "history": [
+    {"date": "2026-07-27", "weight_kg": 71.7, "waist_cm": 76.0, "sleep_minutes": 407},
+    {"date": "2026-07-28", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 419},
+    {"date": "2026-07-29", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 430},
+    {"date": "2026-07-31", "weight_kg": 71.0, "waist_cm": 76.0, "sleep_minutes": 380},
+    {"date": "2026-08-01", "weight_kg": null, "waist_cm": null, "sleep_minutes": 370}
+  ],
+  "database_progress": {
+    "Sleep": "LOCKED",
+    "Morning Check": "PARTIAL",
+    "Breakfast": "LOCKED",
+    "Lunch": "LOCKED",
+    "Training": "LOCKED",
+    "Dinner": "LOCKED",
+    "Daily Summary": "LOCKED"
+  },
+  "recovery_index": {
+    "status": "PENDING",
+    "note": "Recovery Index 等 Weekly Audit 时结合本周数据统一计算；今日 Morning Check 缺失。"
+  },
+  "daily_summary": {
+    "training": "恢复日，无力量训练。",
+    "diet": "早餐蛋白质充足；午餐摄入主食、肉类、豆制品和蔬菜；晚餐未安排正餐，仅补充水果和少量酒精。",
+    "sleep": "睡眠评分 68 分，实际睡眠 6h10m；深睡比例较高（39%），但总睡眠时长偏短。",
+    "body": "空腹体重和空腹腰围未记录，原因：已进食。",
+    "tomorrow": "Week03 Day7 正式归档，不再修改。"
+  },
+  "discovery": {
+    "training": "本周已完成胸+三头、肩+二头+前臂、休息恢复和今日恢复日。",
+    "diet": "午餐烩菜保留完整原配方，便于后续数据库审计。",
+    "body": "Morning Check 缺少空腹体重与腰围；睡眠总时长偏短。"
+  },
+  "notes": "Week03 Day7 正式归档；Morning Check 因已进食缺失。"
+}
