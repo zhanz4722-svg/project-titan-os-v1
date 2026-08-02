@@ -130,10 +130,19 @@
     ["碳水 (g)", d.nutrition.carbs_g, d.nutrition.targets.carbs_g],
     ["脂肪 (g)", d.nutrition.fat_g, d.nutrition.targets.fat_g]
   ];
-  const nutritionRows = nutritionItems.map(([name, value, target]) => {
+  const nutritionKeys = ["calories_kcal", "protein_g", "carbs_g", "fat_g"];
+  const displayNutritionValue = (key, value) => {
+    const range = d.nutrition.ranges?.[key];
+    if (Array.isArray(range) && range.length === 2) {
+      return `${range[0]}-${range[1]}`;
+    }
+    return isNum(value) ? `~${value}` : dash;
+  };
+  const nutritionRows = nutritionItems.map(([name, value, target], index) => {
+    const key = nutritionKeys[index];
     const percent = pct(value, target);
     const delta = isNum(value) && isNum(target) ? (value <= target ? `~${target - value}` : `+${value - target}`) : "未估算";
-    return `<div class="nutrition-row"><b>${name}</b><span>${isNum(value) ? `~${value}` : dash}</span><span>${target}</span><span>${percent ?? dash}${percent !== null ? "%" : ""}</span><div class="bar ${percent !== null && percent > 100 ? "red" : "blue"}"><span style="width:${percent === null ? 0 : Math.min(percent, 100)}%"></span></div><span>${delta}</span></div>`;
+    return `<div class="nutrition-row"><b>${name}</b><span>${displayNutritionValue(key, value)}</span><span>${target}</span><span>${percent ?? dash}${percent !== null ? "%" : ""}</span><div class="bar ${percent !== null && percent > 100 ? "red" : "blue"}"><span style="width:${percent === null ? 0 : Math.min(percent, 100)}%"></span></div><span>${delta}</span></div>`;
   }).join("");
 
   const progressEntries = Object.entries(d.database_progress || {});
@@ -163,7 +172,7 @@
     </div>
     <div class="col">
       <section class="card training">${cardTitle(4, "Training（训练记录）", "red")}<div class="training-meta"><span>训练开始：${esc(training.start_time)}</span><span>训练结束：${esc(training.end_time)}</span><span>总时长：${fmtMin(duration)}</span></div><table><thead><tr><th>项目</th><th>肌群</th><th>训练内容</th><th>动作/组</th><th>重量</th><th>次数</th><th>RPE</th><th>备注</th></tr></thead><tbody>${trainingRows}</tbody></table><div class="note-box">${trainingNote}</div></section>
-      <section class="card summary">${cardTitle(6, "Daily Summary（每日总结）", "red", "LOCKED")}<table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody>${Object.entries(d.daily_summary || {}).map(([key, value]) => `<tr><td>${({training: "今日训练完成情况", diet: "今日饮食完成情况", body: "身体状态总结", tomorrow: "明日计划 / 调整"})[key] || key}</td><td>${esc(value)}</td></tr>`).join("")}</tbody></table></section>
+      <section class="card summary">${cardTitle(6, "Daily Summary（每日总结）", "red", "LOCKED")}<table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody>${Object.entries(d.daily_summary || {}).map(([key, value]) => `<tr><td>${({training: "今日训练完成情况", diet: "今日饮食完成情况", sleep: "睡眠总结", body: "身体状态总结", tomorrow: "明日计划 / 调整"})[key] || key}</td><td>${esc(value)}</td></tr>`).join("")}</tbody></table></section>
       <section class="card summary">${cardTitle(7, "今日关键发现（Discovery）", "red", "LOCKED")}<table><thead><tr><th>类别</th><th>内容</th></tr></thead><tbody>${Object.entries(d.discovery || {}).map(([key, value]) => `<tr><td>${({training: "训练表现", diet: "饮食反馈", body: "身体反馈"})[key] || key}</td><td>${esc(value)}</td></tr>`).join("")}</tbody></table></section>
       <section class="card">${cardTitle(8, "备注（可随时补充）", "red", d.notes ? "LOCKED" : "PENDING")}<div class="empty">${esc(d.notes || "等待补充")}</div></section>
     </div>

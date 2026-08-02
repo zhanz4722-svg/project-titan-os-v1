@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "date": "2026-08-02",
+    "week": "Week04",
+    "day": "Day1",
+    "version": "3.1",
+    "timezone": "Europe/Berlin"
+  },
+  "morning_check": {
+    "weight_kg": null,
+    "waist_cm": null,
+    "training_readiness": null,
+    "muscle_recovery": null,
+    "stomach_status": null,
+    "mental_status": null
+  },
+  "sleep": {
+    "time_in_bed_minutes": 427,
+    "sleep_minutes": 405,
+    "sleep_latency_minutes": 15,
+    "efficiency_percent": 94,
+    "score": 77,
+    "heart_rate_bpm": 59,
+    "respiratory_rate": 15,
+    "deep_minutes": 123,
+    "light_minutes": 214,
+    "rem_minutes": 68,
+    "awakenings": 2,
+    "awake_minutes": 7
+  },
+  "meals": {
+    "breakfast": [
+      {"food": "黑面包", "quantity": "200 g"},
+      {"food": "车厘子", "quantity": "100 g"},
+      {"food": "黄瓜", "quantity": "200 g"},
+      {"food": "蛋白质奶昔", "quantity": "35 g 蛋白质"},
+      {"food": "鸡肉火腿片", "quantity": "10 g 蛋白质，约1 g 盐"},
+      {"food": "无油煎蛋", "quantity": "2 个"},
+      {"food": "核桃", "quantity": "10 g"}
+    ],
+    "lunch": [
+      {"food": "生米", "quantity": "150 g"},
+      {"food": "德国超市猪肉丸子", "quantity": "250 g"},
+      {"food": "五花肉", "quantity": "125 g"},
+      {"food": "粉条", "quantity": "100 g"},
+      {"food": "白菜", "quantity": "300 g"},
+      {"food": "豆腐", "quantity": "100 g"},
+      {"food": "调味", "quantity": "生抽、白糖"}
+    ],
+    "dinner": [
+      {"food": "蛋白质奶昔", "quantity": "35 g 蛋白质"},
+      {"food": "香蕉", "quantity": "1 根"},
+      {"food": "脆桃", "quantity": "1 个"}
+    ]
+  },
+  "meal_notes": {
+    "lunch": "五花肉先焯水，再利用自身油脂煸炒，未额外放油。",
+    "dinner": "晚餐以蛋白质奶昔和水果为主。"
+  },
+  "training": {
+    "status": "LOCKED",
+    "type": "Back + Rear Delts/Scapular Stability + Forearms",
+    "performed": true,
+    "start_time": "10:56",
+    "end_time": "12:11",
+    "duration_minutes": 75,
+    "body_parts": ["背部", "后束/肩胛稳定", "前臂"],
+    "notes": "今天训练完成度高，背部主项全部完成；胸托划船 59 kg 三组全部轻松，下次具备升级条件。",
+    "exercises": [
+      {
+        "name": "高位下拉",
+        "body_part": "背部",
+        "target": "背阔肌",
+        "total_sets": 4,
+        "working_sets": 3,
+        "notes": "下次继续 52 kg。",
+        "sets": [
+          {"set_no": 1, "weight_kg": 45, "reps": 15, "type": "warmup", "rpe": null, "note": "中等偏轻"},
+          {"set_no": 2, "weight_kg": 52, "reps": 10, "type": "working", "rpe": null, "note": "稍累，全程稳定"},
+          {"set_no": 3, "weight_kg": 52, "reps": 10, "type": "working", "rpe": null, "note": "第8次开始明显疲劳"},
+          {"set_no": 4, "weight_kg": 52, "reps": 10, "type": "working", "rpe": null, "note": "最后1次接近力竭，组间休息稍长"}
+        ]
+      },
+      {
+        "name": "坐姿划船",
+        "body_part": "背部",
+        "target": "中背",
+        "total_sets": 4,
+        "working_sets": 3,
+        "notes": "下次继续 54.3 kg。",
+        "sets": [
+          {"set_no": 1, "weight_kg": 39, "reps": 15, "type": "warmup", "rpe": null, "note": "轻松"},
+          {"set_no": 2, "weight_kg": 54.3, "reps": 12, "type": "working", "rpe": null, "note": "最后1次吃力"},
+          {"set_no": 3, "weight_kg": 54.3, "reps": 12, "type": "working", "rpe": null, "note": "第8次开始疲劳，无力竭"},
+          {"set_no": 4, "weight_kg": 54.3, "reps": 12, "type": "working", "rpe": null, "note": "整体良好，无明显吃力"}
+        ]
+      },
+      {
+        "name": "胸托划船",
+        "body_part": "背部",
+        "target": "中背",
+        "total_sets": 4,
+        "working_sets": 3,
+        "notes": "下次尝试 63 kg。",
+        "sets": [
+          {"set_no": 1, "weight_kg": 39, "reps": 15, "type": "warmup", "rpe": null, "note": "轻松"},
+          {"set_no": 2, "weight_kg": 59, "reps": 12, "type": "working", "rpe": null, "note": "轻松"},
+          {"set_no": 3, "weight_kg": 59, "reps": 12, "type": "working", "rpe": null, "note": "轻松"},
+          {"set_no": 4, "weight_kg": 59, "reps": 12, "type": "working", "rpe": null, "note": "轻松"}
+        ]
+      },
+      {
+        "name": "直臂下压",
+        "body_part": "背部",
+        "target": "背阔肌孤立",
+        "total_sets": 3,
+        "working_sets": 3,
+        "notes": "下次继续 20.3 kg。",
+        "sets": [
+          {"set_no": 1, "weight_kg": 20.3, "reps": 12, "type": "working", "rpe": null, "note": "轻松"},
+          {"set_no": 2, "weight_kg": 20.3, "reps": 12, "type": "working", "rpe": null, "note": "后2次接近力竭"},
+          {"set_no": 3, "weight_kg": 20.3, "reps": 12, "type": "working", "rpe": null, "note": "后2次力竭，最后1次需要轻微借力"}
+        ]
+      },
+      {
+        "name": "面拉",
+        "body_part": "后束/肩胛稳定",
+        "target": "肩后束/肩胛稳定",
+        "total_sets": 3,
+        "working_sets": 3,
+        "notes": "下次可从 22.3 kg 开始测试。",
+        "sets": [
+          {"set_no": 1, "weight_kg": 20.3, "reps": 15, "type": "working", "rpe": null, "note": "轻松"},
+          {"set_no": 2, "weight_kg": 20.3, "reps": 15, "type": "working", "rpe": null, "note": "最后1次艰难"},
+          {"set_no": 3, "weight_kg": 22.3, "reps": 15, "type": "working", "rpe": null, "note": "最后3次明显疲惫"}
+        ]
+      },
+      {
+        "name": "EZ杠腕弯举",
+        "body_part": "前臂",
+        "target": "前臂",
+        "total_sets": 3,
+        "working_sets": 3,
+        "notes": "第3组反握按实际完成 15 次记录，不自动补成 30 次；下次继续 10 kg。",
+        "sets": [
+          {"set_no": 1, "movement": "正握", "weight_kg": 10, "reps": 15, "type": "working", "working_set": true, "rpe": null, "note": "未反馈"},
+          {"set_no": 1, "movement": "反握", "weight_kg": 10, "reps": 30, "type": "working", "working_set": true, "rpe": null, "note": "未反馈"},
+          {"set_no": 2, "movement": "正握", "weight_kg": 10, "reps": 15, "type": "working", "working_set": true, "rpe": null, "note": "未反馈"},
+          {"set_no": 2, "movement": "反握", "weight_kg": 10, "reps": 30, "type": "working", "working_set": true, "rpe": null, "note": "未反馈"},
+          {"set_no": 3, "movement": "正握", "weight_kg": 10, "reps": 15, "type": "working", "working_set": true, "rpe": null, "note": "轻松"},
+          {"set_no": 3, "movement": "反握", "weight_kg": 10, "reps": 15, "type": "working", "working_set": true, "rpe": null, "note": "轻松"}
+        ]
+      }
+    ]
+  },
+  "training_volume": [
+    {"muscle": "背阔肌", "exercise": "高位下拉", "working_sets": 3},
+    {"muscle": "中背", "exercise": "坐姿划船", "working_sets": 3},
+    {"muscle": "中背", "exercise": "胸托划船", "working_sets": 3},
+    {"muscle": "背阔肌孤立", "exercise": "直臂下压", "working_sets": 3},
+    {"muscle": "后束/肩胛稳定", "exercise": "面拉", "working_sets": 3},
+    {"muscle": "前臂", "exercise": "EZ杠腕弯举", "working_sets": 3}
+  ],
+  "working_weight_updates": [
+    {"exercise": "高位下拉", "today_weight": "52 kg", "today_performance": "10 / 10 / 10", "next_plan": "保持 52 kg"},
+    {"exercise": "坐姿划船", "today_weight": "54.3 kg", "today_performance": "12 / 12 / 12", "next_plan": "保持 54.3 kg"},
+    {"exercise": "胸托划船", "today_weight": "59 kg", "today_performance": "12 / 12 / 12（轻松）", "next_plan": "升级 63 kg"},
+    {"exercise": "直臂下压", "today_weight": "20.3 kg", "today_performance": "12 / 12 / 12", "next_plan": "保持 20.3 kg"},
+    {"exercise": "面拉", "today_weight": "20.3 -> 22.3 kg", "today_performance": "最后一组 22.3 kg × 15", "next_plan": "升级 22.3 kg"},
+    {"exercise": "EZ杠腕弯举", "today_weight": "10 kg", "today_performance": "3 组完成", "next_plan": "保持 10 kg"}
+  ],
+  "nutrition": {
+    "estimated": true,
+    "calories_kcal": 3125,
+    "protein_g": 202.5,
+    "carbs_g": 340,
+    "fat_g": 100,
+    "ranges": {
+      "calories_kcal": [3050, 3200],
+      "protein_g": [200, 205],
+      "carbs_g": [330, 350],
+      "fat_g": [95, 105]
+    },
+    "targets": {"calories_kcal": 3000, "protein_g": 180, "carbs_g": 350, "fat_g": 70},
+    "note": "营养为全天估算区间：热量 3050-3200 kcal，蛋白质 200-205 g，碳水 330-350 g，脂肪 95-105 g。"
+  },
+  "history": [
+    {"date": "2026-07-27", "weight_kg": 71.7, "waist_cm": 76.0, "sleep_minutes": 407},
+    {"date": "2026-07-28", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 419},
+    {"date": "2026-07-29", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 430},
+    {"date": "2026-07-31", "weight_kg": 71.0, "waist_cm": 76.0, "sleep_minutes": 380},
+    {"date": "2026-08-01", "weight_kg": null, "waist_cm": null, "sleep_minutes": 370},
+    {"date": "2026-08-02", "weight_kg": null, "waist_cm": null, "sleep_minutes": 405}
+  ],
+  "database_progress": {
+    "Sleep": "LOCKED",
+    "Morning Check": "PENDING",
+    "Breakfast": "LOCKED",
+    "Lunch": "LOCKED",
+    "Training": "LOCKED",
+    "Dinner": "LOCKED",
+    "Daily Summary": "LOCKED"
+  },
+  "recovery_index": {
+    "status": "PENDING",
+    "note": "Recovery Index 等 Weekly Audit 时结合本周数据统一计算；今日 Morning Check 未提供。"
+  },
+  "daily_summary": {
+    "training": "背部 + 后束/肩胛稳定 + 前臂训练完成，训练时长 1h15m。胸托划船 59 kg 三组全部轻松，是今天最明确进步点。",
+    "diet": "全天营养估算约 3050-3200 kcal，蛋白质约 200-205 g，总热量和蛋白质基本满足增肌恢复需求。",
+    "sleep": "睡眠评分 77 分，实际睡眠 6h45m，效率 94%；效率不错，但总睡眠时长仍略短。",
+    "body": "Morning Check 未提供，体重和腰围保持为空值。",
+    "tomorrow": "Working Weight Database 已更新：胸托划船下次尝试 63 kg，面拉下次可从 22.3 kg 开始测试。"
+  },
+  "discovery": {
+    "training": "高位下拉、坐姿划船、直臂下压保持当前重量；胸托划船和面拉具备升级条件。",
+    "diet": "蛋白质与总热量达到增肌恢复需求；脂肪估算偏高，后续可在 Weekly Audit 中观察。",
+    "body": "睡眠效率良好但时长略短，训练表现仍完成度高。"
+  },
+  "notes": "2026-08-02 训练正式结束；Working Weight Database 以今日锁定数据作为最新基准。"
+}

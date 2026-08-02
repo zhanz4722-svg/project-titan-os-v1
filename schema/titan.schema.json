@@ -114,6 +114,15 @@
         "protein_g": {"type": ["number", "null"]},
         "carbs_g": {"type": ["number", "null"]},
         "fat_g": {"type": ["number", "null"]},
+        "ranges": {
+          "type": "object",
+          "properties": {
+            "calories_kcal": {"$ref": "#/$defs/numberRange"},
+            "protein_g": {"$ref": "#/$defs/numberRange"},
+            "carbs_g": {"$ref": "#/$defs/numberRange"},
+            "fat_g": {"$ref": "#/$defs/numberRange"}
+          }
+        },
         "targets": {
           "type": "object",
           "required": ["calories_kcal", "protein_g", "carbs_g", "fat_g"],
@@ -136,6 +145,12 @@
     "notes": {"type": ["string", "null"]}
   },
   "$defs": {
+    "numberRange": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {"type": "number"}
+    },
     "meal": {
       "type": "array",
       "items": {
