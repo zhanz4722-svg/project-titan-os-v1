@@ -1,0 +1,233 @@
+{
+  "meta": {
+    "date": "2026-08-03",
+    "week": "Week04",
+    "day": "Day2",
+    "version": "3.1",
+    "timezone": "Europe/Berlin"
+  },
+  "morning_check": {
+    "weight_kg": null,
+    "waist_cm": null,
+    "training_readiness": null,
+    "muscle_recovery": "训练过程中未出现明显疲劳衰减，恢复基本满足训练需求。",
+    "stomach_status": "晚餐胃部负担较小，适合胃食管反流情况下的训练后补充。",
+    "mental_status": null,
+    "missing_reason": "未提供"
+  },
+  "sleep": {
+    "time_in_bed_minutes": null,
+    "sleep_minutes": 400,
+    "sleep_latency_minutes": null,
+    "efficiency_percent": null,
+    "score": null,
+    "heart_rate_bpm": null,
+    "respiratory_rate": null,
+    "deep_minutes": null,
+    "light_minutes": null,
+    "rem_minutes": null,
+    "awakenings": null,
+    "awake_minutes": null,
+    "quality": "良好",
+    "deep_status": "正常",
+    "light_status": "正常",
+    "rem_status": "正常",
+    "heart_rate_status": "正常范围",
+    "respiratory_rate_status": "正常范围"
+  },
+  "meals": {
+    "breakfast": [
+      {"food": "黑面包", "quantity": "200 g"},
+      {"food": "煎蛋", "quantity": "2 个"},
+      {"food": "黄瓜", "quantity": "250 g"},
+      {"food": "车厘子", "quantity": "100 g"},
+      {"food": "鸡肉火腿片", "quantity": "50 g"},
+      {"food": "高蛋白奶昔", "quantity": "35 g 蛋白质"}
+    ],
+    "lunch": [
+      {"food": "生米", "quantity": "150 g"},
+      {"food": "去皮去骨鸡腿肉", "quantity": "300 g"},
+      {"food": "西兰花", "quantity": "250 g"}
+    ],
+    "dinner": [
+      {"food": "高蛋白奶昔", "quantity": "35 g 蛋白质"},
+      {"food": "香蕉", "quantity": "1 根"},
+      {"food": "脆桃", "quantity": "1 个"}
+    ]
+  },
+  "meal_notes": {
+    "breakfast": "高蛋白、高碳水、低脂肪，非常适合作为训练日早餐。评价：★★★★★。",
+    "lunch": "优质蛋白充足，碳水足够支持下午训练，脂肪控制优秀；目前最标准的一顿增肌午餐。评价：★★★★★。",
+    "dinner": "快速补充蛋白质与训练后糖原，对胃部负担较小。评价：★★★★☆。"
+  },
+  "training": {
+    "status": "LOCKED",
+    "type": "Push（胸 + 三头 + 侧平举）",
+    "performed": true,
+    "start_time": "16:56",
+    "end_time": "19:10",
+    "duration_minutes": 134,
+    "body_parts": ["胸部", "三头", "肩部"],
+    "notes": "正式工作组 17 组，完成度 100%。原始日志标题为 Week04 Day1 Push；系统按连续日期归档为 Week04 Day2 Push。",
+    "exercises": [
+      {
+        "name": "上斜器械推胸",
+        "body_part": "胸部",
+        "target": "上胸",
+        "total_sets": 3,
+        "working_sets": 3,
+        "notes": "40 kg 继续作为 Stable WW。",
+        "sets": [
+          {"set_no": 1, "weight_kg": 40, "reps": 12, "type": "working", "rpe": null, "note": "全程可控"},
+          {"set_no": 2, "weight_kg": 40, "reps": 12, "type": "working", "rpe": null, "note": "最后两次开始吃力"},
+          {"set_no": 3, "weight_kg": 40, "reps": 12, "type": "working", "rpe": null, "note": "最后一次接近力竭"}
+        ]
+      },
+      {
+        "name": "水平器械推胸",
+        "body_part": "胸部",
+        "target": "胸大肌",
+        "total_sets": 3,
+        "working_sets": 3,
+        "notes": "今日最大 Discovery：限制因素更像是手腕稳定，而不是胸肌力量；下次优先检查握法和手腕中立。",
+        "sets": [
+          {"set_no": 1, "weight_kg": 40, "reps": 12, "type": "working", "rpe": null, "note": "完成"},
+          {"set_no": 2, "weight_kg": 40, "reps": 11, "type": "working", "rpe": null, "note": "手腕稳定开始成为限制因素"},
+          {"set_no": 3, "weight_kg": 35, "reps": 11, "type": "working", "rpe": null, "note": "降重完成，继续观察手腕位置"}
+        ]
+      },
+      {
+        "name": "Pec Deck",
+        "body_part": "胸部",
+        "target": "胸部孤立",
+        "total_sets": 3,
+        "working_sets": 3,
+        "notes": "59 kg 继续作为 Stable WW；最后一组最后两次吃力。",
+        "sets": [
+          {"set_no": 1, "weight_kg": 59, "reps": 12, "type": "working", "rpe": null, "note": "完成"},
+          {"set_no": 2, "weight_kg": 59, "reps": 12, "type": "working", "rpe": null, "note": "完成"},
+          {"set_no": 3, "weight_kg": 59, "reps": 12, "type": "working", "rpe": null, "note": "最后两次吃力"}
+        ]
+      },
+      {
+        "name": "绳索下压",
+        "body_part": "三头",
+        "target": "肱三头肌",
+        "total_sets": 3,
+        "working_sets": 3,
+        "notes": "表现稳定，继续保持当前 Working Weight。",
+        "sets": [
+          {"set_no": 1, "weight_kg": 15.8, "reps": 12, "type": "working", "rpe": null, "note": "稳定"},
+          {"set_no": 2, "weight_kg": 15.8, "reps": 12, "type": "working", "rpe": null, "note": "稳定"},
+          {"set_no": 3, "weight_kg": 15.8, "reps": 12, "type": "working", "rpe": null, "note": "稳定"}
+        ]
+      },
+      {
+        "name": "绳索过顶臂屈伸",
+        "body_part": "三头",
+        "target": "肱三头肌长头",
+        "total_sets": 3,
+        "working_sets": 3,
+        "notes": "第二组反而比第一组轻松，说明动作熟练度提升；13.5 kg 正式写入 Stable WW。",
+        "sets": [
+          {"set_no": 1, "weight_kg": 13.5, "reps": 13, "type": "working", "rpe": null, "note": "完成"},
+          {"set_no": 2, "weight_kg": 13.5, "reps": 12, "type": "working", "rpe": null, "note": "比第一组更轻松"},
+          {"set_no": 3, "weight_kg": 13.5, "reps": 12, "type": "working", "rpe": null, "note": "完成"}
+        ]
+      },
+      {
+        "name": "哑铃侧平举",
+        "body_part": "肩部",
+        "target": "肩中束",
+        "total_sets": 2,
+        "working_sets": 2,
+        "notes": "6 kg 已经非常稳定，周四肩部专项继续挑战 4×15；若四组依然轻松，下周测试更高重量。",
+        "sets": [
+          {"set_no": 1, "weight_kg": 6, "reps": 15, "type": "working", "rpe": null, "note": "轻松"},
+          {"set_no": 2, "weight_kg": 6, "reps": 15, "type": "working", "rpe": null, "note": "轻松"}
+        ]
+      }
+    ]
+  },
+  "training_volume": [
+    {"muscle": "胸部", "exercise": "上斜器械推胸", "working_sets": 3},
+    {"muscle": "胸部", "exercise": "水平器械推胸", "working_sets": 3},
+    {"muscle": "胸部", "exercise": "Pec Deck", "working_sets": 3},
+    {"muscle": "三头", "exercise": "绳索下压", "working_sets": 3},
+    {"muscle": "三头", "exercise": "绳索过顶臂屈伸", "working_sets": 3},
+    {"muscle": "肩中束", "exercise": "哑铃侧平举", "working_sets": 2}
+  ],
+  "working_weight_updates": [
+    {"exercise": "上斜器械推胸", "today_weight": "40 kg", "today_performance": "12 / 12 / 12", "next_plan": "保持 40 kg Stable WW"},
+    {"exercise": "水平器械推胸", "today_weight": "40 -> 35 kg", "today_performance": "12 / 11 / 11", "next_plan": "优先观察握法、手腕中立与稳定性"},
+    {"exercise": "Pec Deck", "today_weight": "59 kg", "today_performance": "12 / 12 / 12", "next_plan": "保持 59 kg Stable WW"},
+    {"exercise": "绳索下压", "today_weight": "15.8 kg", "today_performance": "12 / 12 / 12", "next_plan": "保持 15.8 kg"},
+    {"exercise": "绳索过顶臂屈伸", "today_weight": "13.5 kg", "today_performance": "13 / 12 / 12", "next_plan": "13.5 kg 写入 Stable WW"},
+    {"exercise": "哑铃侧平举", "today_weight": "6 kg", "today_performance": "15 / 15", "next_plan": "周四肩部专项挑战 4×15"}
+  ],
+  "nutrition": {
+    "estimated": true,
+    "calories_kcal": 2850,
+    "protein_g": 212.5,
+    "carbs_g": 330,
+    "fat_g": 60,
+    "ranges": {
+      "calories_kcal": [2800, 2900],
+      "protein_g": [210, 215],
+      "carbs_g": [320, 340],
+      "fat_g": [55, 65]
+    },
+    "targets": {"calories_kcal": 3000, "protein_g": 180, "carbs_g": 350, "fat_g": 70},
+    "note": "营养为全天估算区间：热量 2800-2900 kcal，蛋白质 210-215 g，碳水 320-340 g，脂肪 55-65 g。"
+  },
+  "history": [
+    {"date": "2026-07-27", "weight_kg": 71.7, "waist_cm": 76.0, "sleep_minutes": 407},
+    {"date": "2026-07-28", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 419},
+    {"date": "2026-07-29", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 430},
+    {"date": "2026-07-31", "weight_kg": 71.0, "waist_cm": 76.0, "sleep_minutes": 380},
+    {"date": "2026-08-01", "weight_kg": null, "waist_cm": null, "sleep_minutes": 370},
+    {"date": "2026-08-02", "weight_kg": null, "waist_cm": null, "sleep_minutes": 405},
+    {"date": "2026-08-03", "weight_kg": null, "waist_cm": null, "sleep_minutes": 400}
+  ],
+  "database_progress": {
+    "Sleep": "LOCKED",
+    "Morning Check": "PENDING",
+    "Breakfast": "LOCKED",
+    "Lunch": "LOCKED",
+    "Training": "LOCKED",
+    "Dinner": "LOCKED",
+    "Daily Summary": "LOCKED"
+  },
+  "recovery_index": {
+    "status": "LOCKED",
+    "score_10": 8.5,
+    "note": "睡眠结构正常，训练过程中无明显疲劳衰减；但总睡眠时长仍低于本周 >=7h 目标。",
+    "rows": [
+      {"metric": "睡眠结构", "value": "正常", "note": "深睡、REM、夜间心率与呼吸率均记录为正常范围。"},
+      {"metric": "睡眠时长", "value": "约6h40m", "note": "低于本周 >=7h 目标。"},
+      {"metric": "训练恢复", "value": "基本满足", "note": "训练中没有明显疲劳衰减。"}
+    ]
+  },
+  "scores": {
+    "sleep": 8.5,
+    "diet": 9.8,
+    "training": 9.3,
+    "recovery": 9.0,
+    "titan_daily_score": 9.2
+  },
+  "daily_summary": {
+    "training": "Push（胸 + 三头 + 侧平举）训练完成，正式工作组 17 组，完成度 100%。胸部整体容量完成优秀，上斜推胸 40 kg 稳定，三头工作重量稳定。",
+    "diet": "全天营养估算约 2800-2900 kcal，蛋白质约 210-215 g，碳水 320-340 g，脂肪 55-65 g；蛋白质超额完成，碳水足够支持训练恢复。",
+    "sleep": "睡眠约 6h40m，睡眠质量良好，结构正常；但总时长仍低于本周 >=7h 目标。",
+    "body": "恢复基本满足训练需求；水平器械推胸的限制因素更像手腕稳定，而不是胸肌力量。",
+    "scores": "睡眠 8.5/10；饮食 9.8/10；训练 9.3/10；恢复 9.0/10；TITAN Daily Score 9.2/10。",
+    "tomorrow": "明天按计划进入 Pull 训练；优先关注今晚睡眠，并为后续训练继续巩固 Working Weight Database。"
+  },
+  "discovery": {
+    "training": "最大关键发现：水平器械推胸时手腕成为限制因素，下次优先检查握法、手腕是否保持中立，以及是否仍出现同样情况。",
+    "diet": "早餐和午餐质量很高，晚餐对胃部负担较小；热量略低于 3000 kcal，但差距不大，可以接受。",
+    "body": "睡眠仍不足 7 小时，如果连续几天低于目标，后续力量增长可能受到影响。",
+    "working_weight": "上斜器械推胸 40 kg、Pec Deck 59 kg、绳索下压 15.8 kg 稳定；绳索过顶臂屈伸 13.5 kg 写入 Stable WW；哑铃侧平举周四挑战 4×15。"
+  },
+  "notes": "2026-08-03 Daily Log 已锁定；今天最大的收获是巩固多个动作的工作重量数据库，并发现水平器械推胸受手腕稳定限制。"
+}

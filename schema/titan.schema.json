@@ -25,25 +25,32 @@
         "training_readiness": {"type": ["number", "null"], "minimum": 0, "maximum": 10},
         "muscle_recovery": {"type": ["string", "null"]},
         "stomach_status": {"type": ["string", "null"]},
-        "mental_status": {"type": ["string", "null"]}
+        "mental_status": {"type": ["string", "null"]},
+        "missing_reason": {"type": ["string", "null"]}
       }
     },
     "sleep": {
       "type": "object",
       "required": ["time_in_bed_minutes", "sleep_minutes", "efficiency_percent", "score", "heart_rate_bpm", "respiratory_rate", "deep_minutes", "light_minutes", "rem_minutes", "awakenings", "awake_minutes"],
       "properties": {
-        "time_in_bed_minutes": {"type": "integer", "minimum": 0},
+        "time_in_bed_minutes": {"type": ["integer", "null"], "minimum": 0},
         "sleep_minutes": {"type": "integer", "minimum": 0},
-        "efficiency_percent": {"type": "number", "minimum": 0, "maximum": 100},
-        "score": {"type": "number", "minimum": 0, "maximum": 100},
-        "heart_rate_bpm": {"type": "number", "minimum": 20, "maximum": 220},
-        "respiratory_rate": {"type": "number", "minimum": 5, "maximum": 50},
-        "deep_minutes": {"type": "integer", "minimum": 0},
-        "light_minutes": {"type": "integer", "minimum": 0},
-        "rem_minutes": {"type": "integer", "minimum": 0},
-        "awakenings": {"type": "integer", "minimum": 0},
-        "awake_minutes": {"type": "integer", "minimum": 0},
-        "sleep_latency_minutes": {"type": ["integer", "null"], "minimum": 0}
+        "efficiency_percent": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+        "score": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+        "heart_rate_bpm": {"type": ["number", "null"], "minimum": 20, "maximum": 220},
+        "respiratory_rate": {"type": ["number", "null"], "minimum": 5, "maximum": 50},
+        "deep_minutes": {"type": ["integer", "null"], "minimum": 0},
+        "light_minutes": {"type": ["integer", "null"], "minimum": 0},
+        "rem_minutes": {"type": ["integer", "null"], "minimum": 0},
+        "awakenings": {"type": ["integer", "null"], "minimum": 0},
+        "awake_minutes": {"type": ["integer", "null"], "minimum": 0},
+        "sleep_latency_minutes": {"type": ["integer", "null"], "minimum": 0},
+        "quality": {"type": ["string", "null"]},
+        "deep_status": {"type": ["string", "null"]},
+        "light_status": {"type": ["string", "null"]},
+        "rem_status": {"type": ["string", "null"]},
+        "heart_rate_status": {"type": ["string", "null"]},
+        "respiratory_rate_status": {"type": ["string", "null"]}
       }
     },
     "meals": {

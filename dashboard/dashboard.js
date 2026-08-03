@@ -19,6 +19,8 @@
   const fmtKg = kg => isNum(kg) ? `${Number.isInteger(kg) ? kg : kg.toFixed(1)} kg` : dash;
   const fmtReps = reps => isNum(reps) ? String(reps) : dash;
   const fmtFixed = (value, digits = 1) => isNum(value) ? value.toFixed(digits) : dash;
+  const fmtPercent = value => isNum(value) ? `${value}%` : dash;
+  const fmtUnit = (value, unit, fallback = null) => isNum(value) ? `${value}${unit}` : (fallback || dash);
   const pct = (value, target) => isNum(value) && isNum(target) && target > 0 ? Math.round(value / target * 100) : null;
   const badgeClass = badge => badge === "PENDING" ? "pending" : badge === "AUTO" ? "auto" : "";
   const cardTitle = (number, title, color = "green", badge = "LOCKED") =>
@@ -48,11 +50,18 @@
   };
 
   const sleep = d.sleep;
-  const stageTotal = sleep.deep_minutes + sleep.light_minutes + sleep.rem_minutes;
-  const deepPct = pct(sleep.deep_minutes, stageTotal) ?? 0;
-  const lightPct = pct(sleep.light_minutes, stageTotal) ?? 0;
-  const remPct = pct(sleep.rem_minutes, stageTotal) ?? 0;
-  const donutBg = `conic-gradient(#32118f 0 ${deepPct}%, #7650ff ${deepPct}% ${deepPct + lightPct}%, #b4a8ff ${deepPct + lightPct}% ${deepPct + lightPct + remPct}%, #ff7a00 ${deepPct + lightPct + remPct}% 100%)`;
+  const hasStageBreakdown = [sleep.deep_minutes, sleep.light_minutes, sleep.rem_minutes].every(isNum);
+  const stageTotal = hasStageBreakdown ? sleep.deep_minutes + sleep.light_minutes + sleep.rem_minutes : null;
+  const deepPct = hasStageBreakdown ? pct(sleep.deep_minutes, stageTotal) ?? 0 : null;
+  const lightPct = hasStageBreakdown ? pct(sleep.light_minutes, stageTotal) ?? 0 : null;
+  const remPct = hasStageBreakdown ? pct(sleep.rem_minutes, stageTotal) ?? 0 : null;
+  const donutBg = hasStageBreakdown
+    ? `conic-gradient(#32118f 0 ${deepPct}%, #7650ff ${deepPct}% ${deepPct + lightPct}%, #b4a8ff ${deepPct + lightPct}% ${deepPct + lightPct + remPct}%, #ff7a00 ${deepPct + lightPct + remPct}% 100%)`
+    : "conic-gradient(#dfe6ee 0 100%)";
+  const stageText = (minutes, status, percentValue) => {
+    const base = isNum(minutes) ? fmtMin(minutes) : (status || dash);
+    return `${base}（${isNum(percentValue) ? `${percentValue}%` : dash}）`;
+  };
 
   const training = d.training;
   const duration = isNum(training.duration_minutes)
@@ -96,13 +105,14 @@
     </tr>`).join("");
   }).join("") : `<tr><td colspan="8" class="center muted">恢复日，无力量训练。</td></tr>`;
 
+  const morningMissingReason = d.morning_check.missing_reason || "未记录";
   const morningRows = [
-    ["空腹体重", isNum(d.morning_check.weight_kg) ? `${d.morning_check.weight_kg.toFixed(1)} kg` : dash, isNum(d.morning_check.weight_kg) ? "正常波动" : "未记录（已进食）"],
-    ["空腹腰围", isNum(d.morning_check.waist_cm) ? `${d.morning_check.waist_cm.toFixed(1)} cm` : dash, isNum(d.morning_check.waist_cm) ? "良好" : "未记录（已进食）"],
+    ["空腹体重", isNum(d.morning_check.weight_kg) ? `${d.morning_check.weight_kg.toFixed(1)} kg` : dash, isNum(d.morning_check.weight_kg) ? "正常波动" : morningMissingReason],
+    ["空腹腰围", isNum(d.morning_check.waist_cm) ? `${d.morning_check.waist_cm.toFixed(1)} cm` : dash, isNum(d.morning_check.waist_cm) ? "良好" : morningMissingReason],
     ["睡眠时长", fmtMin(sleep.sleep_minutes), "良好"],
-    ["睡眠效率", `${sleep.efficiency_percent}%`, "优秀"],
-    ["睡眠评分", `${sleep.score} 分`, "良好"],
-    ["静息心率", `${sleep.heart_rate_bpm} bpm`, "良好"],
+    ["睡眠效率", fmtPercent(sleep.efficiency_percent), isNum(sleep.efficiency_percent) ? "优秀" : (sleep.quality || "良好")],
+    ["睡眠评分", fmtUnit(sleep.score, " 分", sleep.quality), "良好"],
+    ["静息心率", fmtUnit(sleep.heart_rate_bpm, " bpm", sleep.heart_rate_status), "良好"],
     ["肌肉恢复", d.morning_check.muscle_recovery, dash],
     ["胃部状态", d.morning_check.stomach_status, dash],
     ["精神状态", d.morning_check.mental_status, dash],
@@ -118,6 +128,14 @@
   ];
   const recoveryCard = () => {
     const recovery = d.recovery_index;
+    if (isNum(recovery?.score_10) || Array.isArray(recovery?.rows)) {
+      const rows = Array.isArray(recovery?.rows) ? recovery.rows : [];
+      const scoreRow = isNum(recovery?.score_10)
+        ? `<tr><td><b>Recovery评分</b></td><td class="center"><b>${recovery.score_10} / 10</b></td><td>${esc(recovery.note)}</td></tr>`
+        : "";
+      const detailRows = rows.map(row => `<tr><td>${esc(row.metric)}</td><td class="center">${esc(row.value)}</td><td>${esc(row.note)}</td></tr>`).join("");
+      return `<section class="card">${cardTitle("", "恢复指数（Recovery Index）", "green", recovery.status || "LOCKED")}<table><thead><tr><th>指标</th><th>数据</th><th>评价</th></tr></thead><tbody>${scoreRow}${detailRows}</tbody></table></section>`;
+    }
     if (recovery?.status === "PENDING") {
       return `<section class="card">${cardTitle("", "恢复指数（Recovery Index）", "green", "PENDING")}<div class="empty">${esc(recovery.note || "等待计算")}</div></section>`;
     }
@@ -164,7 +182,7 @@
       <section class="card">${cardTitle("", "数据库进度（Database Progress）", "blue")}<div>${progressEntries.map(([key, status]) => { const complete = status === "LOCKED" || status === "SKIPPED"; const label = status === "PENDING" ? "待补" : status === "PARTIAL" ? "部分" : "完成"; const width = complete ? 100 : status === "PARTIAL" ? 65 : 35; return `<div class="progress-row"><b>${key}</b><span class="center">🔒 ${status}</span><span class="center">${label}</span><div class="bar"><span style="width:${width}%"></span></div></div>`; }).join("")}</div><div class="overall">总体完成度：${completedCount} / ${progressEntries.length}（${Math.round(completedCount / progressEntries.length * 100)}%）</div></section>
     </div>
     <div class="col">
-      <section class="card">${cardTitle("", "Sleep（睡眠记录）", "blue")}<div class="sleep-wrap"><div><div class="small">睡眠效率</div><div class="big">${sleep.efficiency_percent}%</div><div class="small">合理范围：85% - 100%</div></div><div class="donut" style="background:${donutBg}"><div class="donut-label">${fmtMin(sleep.sleep_minutes)}</div></div><div class="legend-list"><div><span class="sw" style="background:#32118f"></span>深睡　${fmtMin(sleep.deep_minutes)}（${deepPct}%）</div><div><span class="sw" style="background:#7650ff"></span>浅睡　${fmtMin(sleep.light_minutes)}（${lightPct}%）</div><div><span class="sw" style="background:#b4a8ff"></span>REM　${fmtMin(sleep.rem_minutes)}（${remPct}%）</div><div><span class="sw" style="background:#ff7a00"></span>清醒　${sleep.awake_minutes}m</div></div></div><div class="sleep-mini"><div class="mini"><strong>${fmtMin(sleep.time_in_bed_minutes)}</strong>卧床时长</div><div class="mini"><strong>${fmtMin(sleep.sleep_minutes)}</strong>实际睡眠</div><div class="mini"><strong>${fmtMin(sleep.sleep_latency_minutes)}</strong>入睡时间</div><div class="mini"><strong>${sleep.awakenings}次</strong>清醒次数</div><div class="mini"><strong>${sleep.score}分</strong>睡眠评分</div></div><div class="note-box">睡眠平均心率：${sleep.heart_rate_bpm} bpm　　睡眠呼吸率：${sleep.respiratory_rate} 次/min</div></section>
+      <section class="card">${cardTitle("", "Sleep（睡眠记录）", "blue")}<div class="sleep-wrap"><div><div class="small">睡眠效率</div><div class="big">${fmtPercent(sleep.efficiency_percent)}</div><div class="small">合理范围：85% - 100%</div></div><div class="donut" style="background:${donutBg}"><div class="donut-label">${fmtMin(sleep.sleep_minutes)}</div></div><div class="legend-list"><div><span class="sw" style="background:#32118f"></span>深睡　${esc(stageText(sleep.deep_minutes, sleep.deep_status, deepPct))}</div><div><span class="sw" style="background:#7650ff"></span>浅睡　${esc(stageText(sleep.light_minutes, sleep.light_status, lightPct))}</div><div><span class="sw" style="background:#b4a8ff"></span>REM　${esc(stageText(sleep.rem_minutes, sleep.rem_status, remPct))}</div><div><span class="sw" style="background:#ff7a00"></span>清醒　${esc(isNum(sleep.awake_minutes) ? `${sleep.awake_minutes}m` : dash)}</div></div></div><div class="sleep-mini"><div class="mini"><strong>${fmtMin(sleep.time_in_bed_minutes)}</strong>卧床时长</div><div class="mini"><strong>${fmtMin(sleep.sleep_minutes)}</strong>实际睡眠</div><div class="mini"><strong>${fmtMin(sleep.sleep_latency_minutes)}</strong>入睡时间</div><div class="mini"><strong>${fmtUnit(sleep.awakenings, "次")}</strong>清醒次数</div><div class="mini"><strong>${fmtUnit(sleep.score, "分", sleep.quality)}</strong>睡眠评分</div></div><div class="note-box">睡眠平均心率：${esc(fmtUnit(sleep.heart_rate_bpm, " bpm", sleep.heart_rate_status))}　　睡眠呼吸率：${esc(fmtUnit(sleep.respiratory_rate, " 次/min", sleep.respiratory_rate_status))}</div></section>
       <div class="meal-grid">${meal(2, "Breakfast（早餐记录）", "orange", d.meals.breakfast, mealNotes.breakfast)}${meal(3, "Lunch（午餐记录）", "red", d.meals.lunch, mealNotes.lunch)}</div>
       ${meal(5, "Dinner（晚餐记录）", "red", d.meals.dinner, mealNotes.dinner)}
       <section class="card">${cardTitle("", d.nutrition.estimated ? "Today Nutrition（全天营养累计）" : "Today Nutrition（未估算）", "blue", d.nutrition.estimated ? "AUTO" : "LOCKED")}<div>${nutritionRows}</div><div class="note-box">${esc(d.nutrition.note || "营养数据为估算值，后续餐饮摄入后自动更新。")}</div></section>
@@ -172,7 +190,7 @@
     </div>
     <div class="col">
       <section class="card training">${cardTitle(4, "Training（训练记录）", "red")}<div class="training-meta"><span>训练开始：${esc(training.start_time)}</span><span>训练结束：${esc(training.end_time)}</span><span>总时长：${fmtMin(duration)}</span></div><table><thead><tr><th>项目</th><th>肌群</th><th>训练内容</th><th>动作/组</th><th>重量</th><th>次数</th><th>RPE</th><th>备注</th></tr></thead><tbody>${trainingRows}</tbody></table><div class="note-box">${trainingNote}</div></section>
-      <section class="card summary">${cardTitle(6, "Daily Summary（每日总结）", "red", "LOCKED")}<table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody>${Object.entries(d.daily_summary || {}).map(([key, value]) => `<tr><td>${({training: "今日训练完成情况", diet: "今日饮食完成情况", sleep: "睡眠总结", body: "身体状态总结", tomorrow: "明日计划 / 调整"})[key] || key}</td><td>${esc(value)}</td></tr>`).join("")}</tbody></table></section>
+      <section class="card summary">${cardTitle(6, "Daily Summary（每日总结）", "red", "LOCKED")}<table><thead><tr><th>项目</th><th>内容</th></tr></thead><tbody>${Object.entries(d.daily_summary || {}).map(([key, value]) => `<tr><td>${({training: "今日训练完成情况", diet: "今日饮食完成情况", sleep: "睡眠总结", body: "身体状态总结", scores: "今日综合评分", tomorrow: "明日计划 / 调整"})[key] || key}</td><td>${esc(value)}</td></tr>`).join("")}</tbody></table></section>
       <section class="card summary">${cardTitle(7, "今日关键发现（Discovery）", "red", "LOCKED")}<table><thead><tr><th>类别</th><th>内容</th></tr></thead><tbody>${Object.entries(d.discovery || {}).map(([key, value]) => `<tr><td>${({training: "训练表现", diet: "饮食反馈", body: "身体反馈"})[key] || key}</td><td>${esc(value)}</td></tr>`).join("")}</tbody></table></section>
       <section class="card">${cardTitle(8, "备注（可随时补充）", "red", d.notes ? "LOCKED" : "PENDING")}<div class="empty">${esc(d.notes || "等待补充")}</div></section>
     </div>
