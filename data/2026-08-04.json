@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "date": "2026-08-04",
+    "week": "Week04",
+    "day": "Day2",
+    "version": "3.1",
+    "timezone": "Europe/Berlin"
+  },
+  "morning_check": {
+    "weight_kg": 71.1,
+    "waist_cm": 76.0,
+    "training_readiness": null,
+    "muscle_recovery": "出现咽痛、早晨头疼和轻微感冒感，主动调整为恢复日。",
+    "stomach_status": null,
+    "mental_status": "轻微感冒早期状态，恢复优先。",
+    "missing_reason": null
+  },
+  "sleep": {
+    "time_in_bed_minutes": null,
+    "sleep_minutes": 409,
+    "sleep_latency_minutes": 8,
+    "efficiency_percent": 97,
+    "score": 81,
+    "heart_rate_bpm": 59,
+    "respiratory_rate": 14,
+    "deep_minutes": 155,
+    "light_minutes": 211,
+    "rem_minutes": 43,
+    "awakenings": 1,
+    "awake_minutes": 4,
+    "quality": "良好",
+    "deep_status": "优秀",
+    "light_status": "正常",
+    "rem_status": "正常下限",
+    "heart_rate_status": "良好",
+    "respiratory_rate_status": "正常"
+  },
+  "meals": {
+    "breakfast": [
+      {"food": "黑面包", "quantity": "100 g"},
+      {"food": "煎蛋", "quantity": "2 个"},
+      {"food": "鸡肉香肠片", "quantity": "50 g"},
+      {"food": "黄瓜", "quantity": "约250 g"},
+      {"food": "蓝莓 + 车厘子", "quantity": "约200 g"},
+      {"food": "香蕉", "quantity": "1 根"},
+      {"food": "高蛋白奶昔", "quantity": "1 瓶（35 g 蛋白）"}
+    ],
+    "lunch": [
+      {"food": "桃子", "quantity": "1 个（餐前）"},
+      {"food": "白象大骨面", "quantity": "1 包"},
+      {"food": "牛腱子", "quantity": "200 g"},
+      {"food": "青菜", "quantity": "250 g"}
+    ],
+    "dinner": [
+      {"food": "车厘子", "quantity": "约175 g"},
+      {"food": "香蕉", "quantity": "1 根"},
+      {"food": "百威拉格", "quantity": "500 mL"},
+      {"food": "土耳其芝麻圈", "quantity": "1 个"},
+      {"food": "高蛋白奶昔", "quantity": "1 瓶（35 g 蛋白）"}
+    ]
+  },
+  "meal_notes": {
+    "breakfast": "早餐记录完整，包含主食、鸡蛋、肉类、水果和蛋白补充。",
+    "lunch": "午餐前先吃桃子 1 个，正餐为白象大骨面、牛腱子和青菜。",
+    "dinner": "下午/晚间合并记录；今日饮用 500 mL 啤酒，感冒期间后续几天建议暂停饮酒。"
+  },
+  "training": {
+    "status": "LOCKED",
+    "type": "Rest（因身体不适主动调整）",
+    "performed": false,
+    "start_time": null,
+    "end_time": null,
+    "duration_minutes": 0,
+    "body_parts": ["恢复日"],
+    "notes": "原计划 Pull（背部），实际因嗓子疼、早晨头疼和轻微感冒主动取消训练，改为恢复日。这是根据身体状态做出的合理调整，不属于训练中断。",
+    "exercises": []
+  },
+  "training_volume": [
+    {"muscle": "恢复日", "exercise": "Rest（Pull 顺延）", "working_sets": 0}
+  ],
+  "working_weight_updates": [
+    {"exercise": "Pull（背部）", "today_weight": "未执行", "today_performance": "因身体不适主动调整为 Rest", "next_plan": "若 8/5 无发热、头痛消失、咽痛减轻且精神恢复，则完成 Pull（背部）"}
+  ],
+  "week04_plan": [
+    {"date": "2026-08-03", "plan": "Push", "status": "完成"},
+    {"date": "2026-08-04", "plan": "Rest", "status": "完成"},
+    {"date": "2026-08-05", "plan": "Pull（背部）", "status": "顺延执行"},
+    {"date": "2026-08-06", "plan": "Shoulder Priority", "status": "待执行"},
+    {"date": "2026-08-07", "plan": "Rest", "status": "待执行"},
+    {"date": "2026-08-08", "plan": "Push/Pull", "status": "待执行"},
+    {"date": "2026-08-09", "plan": "Arm Priority", "status": "待执行"}
+  ],
+  "nutrition": {
+    "estimated": true,
+    "calories_kcal": 3050,
+    "protein_g": 187.5,
+    "carbs_g": 370,
+    "fat_g": 67.5,
+    "ranges": {
+      "calories_kcal": [3000, 3100],
+      "protein_g": [185, 190],
+      "carbs_g": [360, 380],
+      "fat_g": [65, 70]
+    },
+    "targets": {"calories_kcal": 3000, "protein_g": 180, "carbs_g": 350, "fat_g": 70},
+    "note": "全天营养估算：热量 3000-3100 kcal，蛋白质 185-190 g，碳水 360-380 g，脂肪 65-70 g。热量、蛋白质达标，感冒期间后续几天建议暂停饮酒。"
+  },
+  "history": [
+    {"date": "2026-07-27", "weight_kg": 71.7, "waist_cm": 76.0, "sleep_minutes": 407},
+    {"date": "2026-07-28", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 419},
+    {"date": "2026-07-29", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 430},
+    {"date": "2026-07-31", "weight_kg": 71.0, "waist_cm": 76.0, "sleep_minutes": 380},
+    {"date": "2026-08-01", "weight_kg": null, "waist_cm": null, "sleep_minutes": 370},
+    {"date": "2026-08-02", "weight_kg": 71.2, "waist_cm": 76.0, "sleep_minutes": 405},
+    {"date": "2026-08-03", "weight_kg": 71.8, "waist_cm": 76.0, "sleep_minutes": 430},
+    {"date": "2026-08-04", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 409}
+  ],
+  "database_progress": {
+    "Sleep": "LOCKED",
+    "Morning Check": "LOCKED",
+    "Breakfast": "LOCKED",
+    "Lunch": "LOCKED",
+    "Training": "LOCKED",
+    "Dinner": "LOCKED",
+    "Daily Summary": "LOCKED"
+  },
+  "recovery_index": {
+    "status": "LOCKED",
+    "score_10": 9.2,
+    "note": "今日最大收获是没有硬撑训练，而是在感冒早期症状出现时主动休息，保护后续训练质量。",
+    "rows": [
+      {"metric": "睡眠", "value": "9.0 / 10", "note": "睡眠连续性好，深睡比例优秀；总时长仍略低于 7 小时。"},
+      {"metric": "饮食", "value": "9.7 / 10", "note": "热量、蛋白质、碳水和脂肪整体达标。"},
+      {"metric": "恢复决策", "value": "10 / 10", "note": "在咽痛、头痛和轻微感冒时主动取消 Pull，改为恢复日。"},
+      {"metric": "身体状态", "value": "7.8 / 10", "note": "存在轻微感冒早期症状，需要优先恢复。"}
+    ]
+  },
+  "scores": {
+    "sleep": 9.0,
+    "diet": 9.7,
+    "recovery_decision": 10.0,
+    "body_status": 7.8,
+    "titan_daily_score": 9.2
+  },
+  "daily_summary": {
+    "training": "原计划 Pull（背部），实际因嗓子疼、早晨头疼和自觉轻微感冒，主动取消训练并改为 Rest。这是合理的恢复决策，不属于训练中断。",
+    "diet": "今日热量、蛋白质、碳水和脂肪均基本达标；但喝了 500 mL 啤酒，感冒期间后续几天最好暂停饮酒。",
+    "sleep": "睡眠评分 81 分，实际睡眠 6h49m，效率 97%；睡眠连续性很好，深睡比例优秀，但总时长仍略低于 7 小时，REM 处于正常下限。",
+    "body": "今日出现嗓子疼、早晨头疼和轻微感冒感。体重回落属于正常水分、糖原波动；腹围连续稳定 76 cm，暂未见明显脂肪增长。",
+    "scores": "睡眠 9.0/10；饮食 9.7/10；恢复决策 10/10；身体状态 7.8/10；TITAN Daily Score 9.2/10。",
+    "tomorrow": "8/5 按顺延计划执行 Pull（背部）。前提：无发热、头痛消失、咽痛减轻、精神状态恢复。"
+  },
+  "discovery": {
+    "training": "今天最重要的训练决策是没有硬撑 Pull，而是把背部训练顺延一天，保护后续四天训练质量。",
+    "diet": "今日营养整体达标；啤酒已记录，感冒期间不建议继续饮酒。",
+    "body": "咽痛、头痛和轻微感冒属于优先恢复信号；主动休息有助于降低病情加重风险，并避免连续数天状态低迷。",
+    "working_weight": "Working Weight Database 今日不更新，Pull 训练顺延至身体状态恢复后执行。"
+  },
+  "notes": "2026-08-04 已锁定：Week04 Day2 Rest。原计划 Pull，因身体不适主动调整；整体计划顺延一天。"
+}
