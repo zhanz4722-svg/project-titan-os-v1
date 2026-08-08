@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "date": "2026-08-08",
+    "week": "Week04",
+    "day": "Day6",
+    "version": "3.1",
+    "timezone": "Europe/Berlin"
+  },
+  "audit_status": "CONFIRMED_FOR_RENDER",
+  "morning_check": {
+    "weight_kg": 71.8,
+    "waist_cm": null,
+    "training_readiness": null,
+    "muscle_recovery": "训练表现明显进步，但恢复端被 5h22m 睡眠拖后腿。",
+    "stomach_status": null,
+    "mental_status": "睡眠明显不足，但完成 Shoulder Priority 训练。",
+    "missing_reason": "空腹腹围未测"
+  },
+  "sleep": {
+    "time_in_bed_minutes": null,
+    "sleep_minutes": 322,
+    "sleep_latency_minutes": null,
+    "efficiency_percent": 92,
+    "score": 66,
+    "heart_rate_bpm": 58,
+    "respiratory_rate": 14,
+    "deep_minutes": 114,
+    "light_minutes": 173,
+    "rem_minutes": 35,
+    "awakenings": 1,
+    "awake_minutes": 4,
+    "quality": "结构和效率尚可，总时长明显不足",
+    "deep_status": "35%",
+    "light_status": "54%",
+    "rem_status": "11%",
+    "heart_rate_status": "良好",
+    "respiratory_rate_status": "正常"
+  },
+  "meals": {
+    "breakfast": [
+      {"food": "黑面包", "quantity": "200 g"},
+      {"food": "黄瓜", "quantity": "2 根"},
+      {"food": "火鸡/鸡肉火腿片", "quantity": "50 g（蛋白质 21 g / 100 g）"},
+      {"food": "水煮蛋", "quantity": "2 个"},
+      {"food": "杏仁", "quantity": "15 g"},
+      {"food": "高蛋白奶昔", "quantity": "1 瓶（35 g 蛋白质）"},
+      {"food": "杏", "quantity": "约100 g / 2 个"},
+      {"food": "黑咖啡", "quantity": "300 mL"}
+    ],
+    "lunch": [
+      {"food": "生米", "quantity": "160 g"},
+      {"food": "白菜", "quantity": "250 g"},
+      {"food": "去皮去骨鸡腿肉", "quantity": "250 g"},
+      {"food": "炒制用油与菜汤", "quantity": "较多，菜汤泡饭并吃掉；仅作估算计入，不给假精确值"}
+    ],
+    "dinner": [
+      {"food": "空气炸锅土豆", "quantity": "450 g"},
+      {"food": "大香蕉", "quantity": "1 根（260 g 带皮）"},
+      {"food": "Skyr 酸奶", "quantity": "1 杯（45 g 蛋白质）"},
+      {"food": "彩椒", "quantity": "1 个"},
+      {"food": "杏", "quantity": "2 个"}
+    ]
+  },
+  "meal_notes": {
+    "breakfast": "早餐蛋白、主食、坚果、水果和咖啡记录完整。",
+    "lunch": "白菜炒制时用了较多油，且菜汤泡饭并吃掉；油脂和热量应计入，但当前只能估算，不做假精确值。",
+    "dinner": "晚餐以土豆、水果、Skyr 酸奶和彩椒为主，碳水、蛋白质和膳食纤维充足。"
+  },
+  "training": {
+    "status": "LOCKED",
+    "type": "Shoulder Priority",
+    "performed": true,
+    "start_time": "11:12",
+    "end_time": "12:15",
+    "duration_minutes": 63,
+    "body_parts": ["肩部", "肩中束", "肩后束/肩胛稳定"],
+    "notes": "Shoulder Priority 训练完成：11:12 开始，12:15 结束，总时长 63 分钟，正式工作组 15 组。肩中束直接训练量 7 组：哑铃侧平举 4 组 + 单臂绳索侧平举 3 组。",
+    "exercises": [
+      {
+        "name": "哑铃侧平举",
+        "body_part": "肩部",
+        "target": "肩中束",
+        "total_sets": 4,
+        "working_sets": 4,
+        "notes": "6 kg/手再次稳定完成 4×15，后两组最后 1-2 次吃力，已具备下一个肩部周期测试更高重量的条件。",
+        "sets": [
+          {"set_no": 1, "weight_kg": 6, "reps": 15, "type": "working", "rpe": null, "note": "完成"},
+          {"set_no": 2, "weight_kg": 6, "reps": 15, "type": "working", "rpe": null, "note": "完成"},
+          {"set_no": 3, "weight_kg": 6, "reps": 15, "type": "working", "rpe": null, "note": "最后1-2次吃力"},
+          {"set_no": 4, "weight_kg": 6, "reps": 15, "type": "working", "rpe": null, "note": "最后1-2次吃力"}
+        ]
+      },
+      {
+        "name": "坐姿哑铃推肩",
+        "body_part": "肩部",
+        "target": "肩前束/整体推举",
+        "total_sets": 3,
+        "working_sets": 3,
+        "notes": "16 kg/手 从历史 12/12/10 推进到 12/12/12，是今日关键进步之一。",
+        "sets": [
+          {"set_no": 1, "weight_kg": 16, "reps": 12, "type": "working", "rpe": null, "note": "完成"},
+          {"set_no": 2, "weight_kg": 16, "reps": 12, "type": "working", "rpe": null, "note": "完成"},
+          {"set_no": 3, "weight_kg": 16, "reps": 12, "type": "working", "rpe": null, "note": "完成，较历史 12/12/10 进步"}
+        ]
+      },
+      {
+        "name": "反向蝴蝶机",
+        "body_part": "肩部",
+        "target": "肩后束",
+        "total_sets": 3,
+        "working_sets": 3,
+        "notes": "52 kg 从历史 15/15/12 推进到 15/15/15，是今日关键进步之一。",
+        "sets": [
+          {"set_no": 1, "weight_kg": 52, "reps": 15, "type": "working", "rpe": null, "note": "完成"},
+          {"set_no": 2, "weight_kg": 52, "reps": 15, "type": "working", "rpe": null, "note": "完成"},
+          {"set_no": 3, "weight_kg": 52, "reps": 15, "type": "working", "rpe": null, "note": "完成，较历史 15/15/12 进步"}
+        ]
+      },
+      {
+        "name": "单臂绳索侧平举",
+        "body_part": "肩部",
+        "target": "肩中束",
+        "total_sets": 3,
+        "working_sets": 3,
+        "notes": "4.5 kg × 12/12/12/侧，前两组轻松，第三组全程吃力但可控；初步建立 4.5 kg 工作重量基线。",
+        "sets": [
+          {"set_no": 1, "left_weight_kg": 4.5, "left_reps": 12, "right_weight_kg": 4.5, "right_reps": 12, "type": "working", "rpe": null, "note": "每侧12次，轻松"},
+          {"set_no": 2, "left_weight_kg": 4.5, "left_reps": 12, "right_weight_kg": 4.5, "right_reps": 12, "type": "working", "rpe": null, "note": "每侧12次，轻松"},
+          {"set_no": 3, "left_weight_kg": 4.5, "left_reps": 12, "right_weight_kg": 4.5, "right_reps": 12, "type": "working", "rpe": null, "note": "每侧12次，全程吃力但可控"}
+        ]
+      },
+      {
+        "name": "面拉",
+        "body_part": "肩部",
+        "target": "肩后束/肩胛稳定",
+        "total_sets": 2,
+        "working_sets": 2,
+        "notes": "20.3 kg × 12/15，完成。",
+        "sets": [
+          {"set_no": 1, "weight_kg": 20.3, "reps": 12, "type": "working", "rpe": null, "note": "完成"},
+          {"set_no": 2, "weight_kg": 20.3, "reps": 15, "type": "working", "rpe": null, "note": "完成"}
+        ]
+      }
+    ]
+  },
+  "training_volume": [
+    {"muscle": "肩中束", "exercise": "哑铃侧平举", "working_sets": 4},
+    {"muscle": "肩前束/整体推举", "exercise": "坐姿哑铃推肩", "working_sets": 3},
+    {"muscle": "肩后束", "exercise": "反向蝴蝶机", "working_sets": 3},
+    {"muscle": "肩中束", "exercise": "单臂绳索侧平举", "working_sets": 3},
+    {"muscle": "肩后束/肩胛稳定", "exercise": "面拉", "working_sets": 2}
+  ],
+  "working_weight_updates": [
+    {"exercise": "哑铃侧平举", "today_weight": "6 kg/手", "today_performance": "15 / 15 / 15 / 15", "next_plan": "下一个肩部周期可测试更高重量"},
+    {"exercise": "坐姿哑铃推肩", "today_weight": "16 kg/手", "today_performance": "12 / 12 / 12", "next_plan": "正式记录为较历史 12/12/10 进步"},
+    {"exercise": "反向蝴蝶机", "today_weight": "52 kg", "today_performance": "15 / 15 / 15", "next_plan": "正式记录为较历史 15/15/12 进步"},
+    {"exercise": "单臂绳索侧平举", "today_weight": "4.5 kg", "today_performance": "12 / 12 / 12 / 侧", "next_plan": "建立 4.5 kg 工作重量基线"},
+    {"exercise": "面拉", "today_weight": "20.3 kg", "today_performance": "12 / 15", "next_plan": "完成，后续继续观察肩胛稳定表现"}
+  ],
+  "nutrition": {
+    "estimated": true,
+    "calories_kcal": 3025,
+    "protein_g": 202.5,
+    "carbs_g": 385,
+    "fat_g": 70,
+    "fiber_g": 40,
+    "ranges": {
+      "calories_kcal": [2900, 3150],
+      "protein_g": [195, 210],
+      "carbs_g": [370, 400],
+      "fat_g": [60, 80]
+    },
+    "targets": {"calories_kcal": 3000, "protein_g": 180, "carbs_g": 350, "fat_g": 70},
+    "note": "今日三餐合理估算约 2900-3150 kcal、蛋白质 195-210 g、碳水 370-400 g、脂肪 60-80 g、膳食纤维 40 g 以上。午餐用油与菜汤已按估算纳入，但不做假精确值。"
+  },
+  "history": [
+    {"date": "2026-07-27", "weight_kg": 71.7, "waist_cm": 76.0, "sleep_minutes": 407},
+    {"date": "2026-07-28", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 419},
+    {"date": "2026-07-29", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 430},
+    {"date": "2026-07-31", "weight_kg": 71.0, "waist_cm": 76.0, "sleep_minutes": 380},
+    {"date": "2026-08-01", "weight_kg": null, "waist_cm": null, "sleep_minutes": 370},
+    {"date": "2026-08-02", "weight_kg": 71.2, "waist_cm": 76.0, "sleep_minutes": 405},
+    {"date": "2026-08-03", "weight_kg": 71.8, "waist_cm": 76.0, "sleep_minutes": 430},
+    {"date": "2026-08-04", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 409},
+    {"date": "2026-08-05", "weight_kg": 71.3, "waist_cm": null, "sleep_minutes": 475},
+    {"date": "2026-08-08", "weight_kg": 71.8, "waist_cm": null, "sleep_minutes": 322}
+  ],
+  "database_progress": {
+    "Sleep": "LOCKED",
+    "Morning Check": "PARTIAL",
+    "Breakfast": "LOCKED",
+    "Lunch": "LOCKED",
+    "Training": "LOCKED",
+    "Dinner": "LOCKED",
+    "Daily Summary": "LOCKED"
+  },
+  "recovery_index": {
+    "status": "AUDIT",
+    "note": "训练表现明显进步，饮食达标；恢复端主要短板是总睡眠仅 5h22m。",
+    "rows": [
+      {"metric": "睡眠", "value": "5h22m / 66分", "note": "睡眠时间明显不足，是今日恢复最大短板；结构和效率尚可。"},
+      {"metric": "饮食", "value": "达标", "note": "训练日约 3000 kcal 与 180 g 蛋白目标基本覆盖，蔬菜水果和纤维充足。"},
+      {"metric": "训练", "value": "15 个正式工作组", "note": "Shoulder Priority 完成，肩中束直接训练量 7 组。"},
+      {"metric": "体重", "value": "71.8 kg", "note": "相对近期偏高，但单日体重不做减脂判断，继续看周均值。"}
+    ]
+  },
+  "scores": {
+    "titan_daily_score": null
+  },
+  "daily_summary": {
+    "training": "Shoulder Priority 完成，11:12-12:15，总时长 63 分钟，正式工作组 15 组。肩中束直接训练量 7 组，符合当前肩宽优先目标。",
+    "diet": "训练日营养目标基本覆盖：热量约 2900-3150 kcal，蛋白质约 195-210 g，碳水约 370-400 g，脂肪约 60-80 g，膳食纤维 40 g 以上。",
+    "sleep": "总睡眠 5h22m，评分 66，效率 92%；睡眠结构和效率不差，但总时长明显不足，是今日恢复最大短板。",
+    "body": "空腹体重 71.8 kg，空腹腹围未测。体重相对近期偏高，但单日体重不做减脂判断，继续观察周均值。",
+    "scores": "数据已确认无误；未提供最终 TITAN Daily Score，本次按数据审计版生成 PNG/PDF。",
+    "tomorrow": "优先补足睡眠；若继续训练，应将恢复状态纳入负荷判断。"
+  },
+  "discovery": {
+    "training": "今日两个关键进步：16 kg 坐姿哑铃推肩从 12/12/10 推进到 12/12/12；52 kg 反向蝴蝶机从 15/15/12 推进到 15/15/15。",
+    "diet": "午餐油脂和菜汤已明确计入估算范围，不给假精确值；全天蔬菜、水果和纤维充足。",
+    "body": "训练表现进步明显，但恢复端被 5h22m 睡眠拖后腿。",
+    "working_weight": "6 kg 侧平举稳定完成 4×15，具备下一个肩部周期测试更高重量条件；单臂绳索侧平举建立 4.5 kg 工作重量基线。"
+  },
+  "notes": "2026-08-08 数据审计版已确认无误，允许由 GitHub Actions 生成 PNG/PDF。"
+}
