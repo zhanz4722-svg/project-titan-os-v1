@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "date": "2026-08-09",
+    "week": "Week04",
+    "day": "Day7",
+    "version": "3.1",
+    "timezone": "Europe/Berlin"
+  },
+  "audit_status": "FINAL_AUDIT_LOCKED_NO_RENDER",
+  "morning_check": {
+    "weight_kg": 71.8,
+    "waist_cm": 76.0,
+    "training_readiness": null,
+    "muscle_recovery": "主动增加一天恢复，今日正式记录为恢复日。",
+    "stomach_status": null,
+    "mental_status": "睡眠相比昨日明显改善，整体恢复优先。",
+    "missing_reason": null
+  },
+  "sleep": {
+    "time_in_bed_minutes": 436,
+    "sleep_minutes": 419,
+    "sleep_latency_minutes": 13,
+    "efficiency_percent": 96,
+    "score": 79,
+    "heart_rate_bpm": 57,
+    "respiratory_rate": 13,
+    "deep_minutes": 164,
+    "light_minutes": 207,
+    "rem_minutes": 48,
+    "awakenings": 1,
+    "awake_minutes": 4,
+    "quality": "相比昨日明显改善，仍差 1 分钟到 7 小时",
+    "deep_status": "39%",
+    "light_status": "49%",
+    "rem_status": "12%",
+    "heart_rate_status": "良好",
+    "respiratory_rate_status": "正常"
+  },
+  "meals": {
+    "breakfast": [
+      {"food": "南瓜籽全谷物面包", "quantity": "2 个（未称重）"},
+      {"food": "蓝莓", "quantity": "100 g"},
+      {"food": "黄瓜", "quantity": "2 根，约200 g"},
+      {"food": "火腿片", "quantity": "50 g（标签 21.7 g 蛋白/100 g，1.7 g 盐/100 g；约 10.85 g 蛋白 + 0.85 g 盐）"},
+      {"food": "煎蛋", "quantity": "2 个"},
+      {"food": "高蛋白奶昔", "quantity": "1 瓶（35 g 蛋白）"},
+      {"food": "黑咖啡", "quantity": "300 mL"}
+    ],
+    "lunch": [
+      {"food": "生米", "quantity": "156 g"},
+      {"food": "去皮去骨鸡腿肉", "quantity": "300 g"},
+      {"food": "豆腐丝", "quantity": "50 g"},
+      {"food": "香菜", "quantity": "30 g"},
+      {"food": "小葱", "quantity": "1 根"},
+      {"food": "冬瓜", "quantity": "50 g"},
+      {"food": "海米", "quantity": "30 g"},
+      {"food": "紫菜", "quantity": "10 g"},
+      {"food": "酱油", "quantity": "2 小勺"},
+      {"food": "醋", "quantity": "2 小勺"},
+      {"food": "辣椒油", "quantity": "3 小勺（约 3×5 mL 估算）"}
+    ],
+    "dinner": [
+      {"food": "空气炸锅土豆", "quantity": "350 g"},
+      {"food": "大香蕉", "quantity": "250 g 带皮"},
+      {"food": "彩椒", "quantity": "1 个"},
+      {"food": "黑啤酒", "quantity": "500 mL"}
+    ]
+  },
+  "meal_notes": {
+    "breakfast": "南瓜籽全谷物面包 2 个未称重；火腿片按标签记录蛋白和盐，不做额外精确推算。",
+    "lunch": "午餐油脂和钠明显高于平时，主要来自辣椒油、海米和酱油；辣椒油按约 3×5 mL 估算。",
+    "dinner": "晚餐包含 500 mL 黑啤酒；黑啤酒品牌和酒精度未知，因此全天营养仅记录可信区间。"
+  },
+  "training": {
+    "status": "LOCKED",
+    "type": "Rest Day",
+    "performed": false,
+    "start_time": null,
+    "end_time": null,
+    "duration_minutes": 0,
+    "body_parts": ["恢复日"],
+    "notes": "原 Week04 Blueprint 今日计划 Arm Priority，但最终决定休息。今日正式记录为恢复日，不虚构手臂训练，也不把 Arm Day 标记为完成。",
+    "exercises": []
+  },
+  "training_volume": [
+    {"muscle": "恢复日", "exercise": "Rest Day（Arm Priority 未执行）", "working_sets": 0}
+  ],
+  "working_weight_updates": [
+    {"exercise": "Arm Priority", "today_weight": "未执行", "today_performance": "主动休息，0 分钟，0 工作组", "next_plan": "不把 Arm Day 标记为完成；后续按恢复状态重新安排"}
+  ],
+  "nutrition": {
+    "estimated": true,
+    "calories_kcal": 3000,
+    "protein_g": 182.5,
+    "carbs_g": 370,
+    "fat_g": 77.5,
+    "fiber_g": 30,
+    "ranges": {
+      "calories_kcal": [2900, 3100],
+      "protein_g": [175, 190],
+      "carbs_g": [350, 390],
+      "fat_g": [70, 85]
+    },
+    "targets": {"calories_kcal": 3000, "protein_g": 180, "carbs_g": 350, "fat_g": 70},
+    "note": "全天营养不能报成精确值：早餐两个面包未称重，辣椒油按约 3×5 mL 估算，黑啤酒品牌/酒精度未知。可信区间为 2900-3100 kcal、蛋白质 175-190 g、碳水 350-390 g、脂肪 70-85 g、膳食纤维 >=30 g。"
+  },
+  "history": [
+    {"date": "2026-07-27", "weight_kg": 71.7, "waist_cm": 76.0, "sleep_minutes": 407},
+    {"date": "2026-07-28", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 419},
+    {"date": "2026-07-29", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 430},
+    {"date": "2026-07-31", "weight_kg": 71.0, "waist_cm": 76.0, "sleep_minutes": 380},
+    {"date": "2026-08-01", "weight_kg": null, "waist_cm": null, "sleep_minutes": 370},
+    {"date": "2026-08-02", "weight_kg": 71.2, "waist_cm": 76.0, "sleep_minutes": 405},
+    {"date": "2026-08-03", "weight_kg": 71.8, "waist_cm": 76.0, "sleep_minutes": 430},
+    {"date": "2026-08-04", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 409},
+    {"date": "2026-08-05", "weight_kg": 71.3, "waist_cm": null, "sleep_minutes": 475},
+    {"date": "2026-08-08", "weight_kg": 71.8, "waist_cm": null, "sleep_minutes": 322},
+    {"date": "2026-08-09", "weight_kg": 71.8, "waist_cm": 76.0, "sleep_minutes": 419}
+  ],
+  "database_progress": {
+    "Sleep": "LOCKED",
+    "Morning Check": "LOCKED",
+    "Breakfast": "LOCKED",
+    "Lunch": "LOCKED",
+    "Training": "LOCKED",
+    "Dinner": "LOCKED",
+    "Daily Summary": "LOCKED"
+  },
+  "recovery_index": {
+    "status": "AUDIT",
+    "note": "睡眠恢复改善、饮食总体满足增肌需求、主动增加一天恢复；主要留意午餐钠/油偏高以及 500 mL 黑啤酒。",
+    "rows": [
+      {"metric": "睡眠", "value": "6h59m / 79分", "note": "相比昨日 5h22m 明显改善，但仍差 1 分钟到 7 小时。"},
+      {"metric": "饮食", "value": "增肌需求基本覆盖", "note": "热量接近训练日水平，蛋白质覆盖约 180 g 目标，不需要补偿性减餐。"},
+      {"metric": "钠与酒精", "value": "偏高", "note": "火腿、海米、酱油和 500 mL 黑啤酒可能带来短期水分和体重波动。"},
+      {"metric": "训练", "value": "Rest Day", "note": "0 分钟，0 工作组；不把 Arm Priority 标记为完成。"}
+    ]
+  },
+  "scores": {
+    "titan_daily_score": null
+  },
+  "daily_summary": {
+    "training": "Rest Day，0 分钟，0 工作组。原 Week04 Blueprint 今日计划 Arm Priority，但最终决定休息，因此不虚构手臂训练，也不把 Arm Day 标记为完成。",
+    "diet": "今日热量约 2900-3100 kcal，蛋白质约 175-190 g，碳水约 350-390 g，脂肪约 70-85 g，膳食纤维 >=30 g。休息日热量接近训练日水平，但不需要补偿性减餐。",
+    "sleep": "实际睡眠 6h59m，效率 96%，评分 79；相比昨日 5h22m 明显改善，虽然仍差 1 分钟到 7 小时。",
+    "body": "空腹体重 71.8 kg，空腹腹围 76 cm。明早体重若暂时高于 71.8 kg，优先考虑水分、胃肠内容物和糖原变化，不用一天体重判断脂肪增长。",
+    "scores": "最终数据库记录审计版未提供 TITAN Daily Score，本次不补造分数。",
+    "tomorrow": "继续关注睡眠、钠摄入后的水分波动，以及训练恢复状态。"
+  },
+  "discovery": {
+    "training": "主动增加一天恢复，并明确不把原计划 Arm Priority 标记为完成。",
+    "diet": "今天真正偏高的是钠和酒精，不是蛋白或碳水；火腿、海米、酱油和黑啤酒可能影响明早体重。",
+    "body": "睡眠恢复明显改善，体重 71.8 kg 与近期偏高值一致，但单日数据不用于判断脂肪增长。",
+    "working_weight": "Working Weight Database 今日不更新。"
+  },
+  "notes": "2026-08-09 最终记录审计版已锁定：Week04 Day7 Rest Day，不生成图片。"
+}
