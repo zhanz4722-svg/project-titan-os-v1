@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "date": "2026-08-10",
+    "week": "Week05",
+    "day": "Day1",
+    "version": "3.1",
+    "timezone": "Europe/Berlin"
+  },
+  "audit_status": "FINAL_DAILY_LOG_LOCKED_NO_RENDER",
+  "morning_check": {
+    "weight_kg": 71.2,
+    "waist_cm": null,
+    "training_readiness": null,
+    "muscle_recovery": "感冒持续未愈，恢复优先级高。",
+    "stomach_status": null,
+    "mental_status": "实验室工作导致午餐和晚餐跳过，全天摄入明显不足。",
+    "missing_reason": "腹围未测"
+  },
+  "sleep": {
+    "time_in_bed_minutes": null,
+    "sleep_minutes": 352,
+    "sleep_latency_minutes": null,
+    "efficiency_percent": 94,
+    "score": 81,
+    "heart_rate_bpm": null,
+    "respiratory_rate": null,
+    "deep_minutes": null,
+    "light_minutes": null,
+    "rem_minutes": null,
+    "awakenings": null,
+    "awake_minutes": null,
+    "quality": "时长不足",
+    "deep_status": null,
+    "light_status": null,
+    "rem_status": null,
+    "heart_rate_status": "未提供",
+    "respiratory_rate_status": "未提供"
+  },
+  "meals": {
+    "breakfast": [
+      {"food": "南瓜籽面包", "quantity": "200 g"},
+      {"food": "煎蛋", "quantity": "2 个"},
+      {"food": "黄瓜", "quantity": "1 根"},
+      {"food": "火腿片", "quantity": "50 g"},
+      {"food": "蓝莓", "quantity": "100 g"},
+      {"food": "杏", "quantity": "2 颗"},
+      {"food": "Milbona High Protein Drink", "quantity": "1 瓶（35 g 蛋白质）"}
+    ],
+    "lunch": [],
+    "dinner": []
+  },
+  "snacks": [
+    {"food": "蛋白棒", "quantity": "1 根（20 g 蛋白质）"}
+  ],
+  "meal_notes": {
+    "breakfast": "早餐完整记录；今天全天实际摄入为早餐 + 1 根 20 g 蛋白质蛋白棒。",
+    "lunch": "未吃。原因：直接去实验室工作。",
+    "dinner": "未吃。原因：实验一直做到晚上。",
+    "snacks": "期间加餐：蛋白棒 1 根，约 20 g 蛋白质。"
+  },
+  "training": {
+    "status": "LOCKED",
+    "type": "Sick Rest",
+    "performed": false,
+    "start_time": null,
+    "end_time": null,
+    "duration_minutes": 0,
+    "body_parts": ["恢复日"],
+    "notes": "原计划 Push，实际训练为 Rest，0 工作组。感冒持续未愈，今日按 Sick Rest 记录。",
+    "exercises": []
+  },
+  "training_volume": [
+    {"muscle": "恢复日", "exercise": "Sick Rest（Push 未执行）", "working_sets": 0}
+  ],
+  "working_weight_updates": [
+    {"exercise": "Push", "today_weight": "未执行", "today_performance": "Sick Rest，0 工作组", "next_plan": "恢复优先；明天恢复正常三餐后再评估训练安排"}
+  ],
+  "nutrition": {
+    "estimated": true,
+    "calories_kcal": 1450,
+    "protein_g": 100,
+    "carbs_g": null,
+    "fat_g": null,
+    "ranges": {
+      "calories_kcal": [1300, 1600],
+      "protein_g": [95, 105]
+    },
+    "targets": {"calories_kcal": 3000, "protein_g": 180, "carbs_g": 350, "fat_g": 70},
+    "note": "全天实际摄入只有早餐 + 1 根 20 g 蛋白质蛋白棒。粗估 1300-1600 kcal，蛋白质 95-105 g；相对 TITAN 目标约 3000 kcal / 180 g 蛋白，少约 1400-1700 kcal，蛋白质少约 75-85 g。碳水和总能量尤其不足。"
+  },
+  "nutrition_audit": {
+    "calorie_deficit_vs_target_kcal": [1400, 1700],
+    "protein_deficit_vs_target_g": [75, 85],
+    "conclusion": "今天低摄入不需要今晚强行补齐，但明天必须恢复正常三餐。"
+  },
+  "history": [
+    {"date": "2026-07-27", "weight_kg": 71.7, "waist_cm": 76.0, "sleep_minutes": 407},
+    {"date": "2026-07-28", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 419},
+    {"date": "2026-07-29", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 430},
+    {"date": "2026-07-31", "weight_kg": 71.0, "waist_cm": 76.0, "sleep_minutes": 380},
+    {"date": "2026-08-01", "weight_kg": null, "waist_cm": null, "sleep_minutes": 370},
+    {"date": "2026-08-02", "weight_kg": 71.2, "waist_cm": 76.0, "sleep_minutes": 405},
+    {"date": "2026-08-03", "weight_kg": 71.8, "waist_cm": 76.0, "sleep_minutes": 430},
+    {"date": "2026-08-04", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 409},
+    {"date": "2026-08-05", "weight_kg": 71.3, "waist_cm": null, "sleep_minutes": 475},
+    {"date": "2026-08-08", "weight_kg": 71.8, "waist_cm": null, "sleep_minutes": 322},
+    {"date": "2026-08-09", "weight_kg": 71.8, "waist_cm": 76.0, "sleep_minutes": 419},
+    {"date": "2026-08-10", "weight_kg": 71.2, "waist_cm": null, "sleep_minutes": 352}
+  ],
+  "database_progress": {
+    "Sleep": "LOCKED",
+    "Morning Check": "PARTIAL",
+    "Breakfast": "LOCKED",
+    "Lunch": "SKIPPED",
+    "Training": "LOCKED",
+    "Dinner": "SKIPPED",
+    "Daily Summary": "LOCKED"
+  },
+  "recovery_index": {
+    "status": "AUDIT",
+    "note": "Sick Rest，饮食明显不足，睡眠时长不足，恢复优先级高。",
+    "rows": [
+      {"metric": "训练", "value": "Sick Rest", "note": "原计划 Push，实际 Rest，0 工作组。"},
+      {"metric": "饮食", "value": "明显不足", "note": "全天只有早餐 + 1 根蛋白棒，约 1300-1600 kcal / 95-105 g 蛋白。"},
+      {"metric": "睡眠", "value": "5h52m / 81分", "note": "睡眠效率 94%，但总时长不足。"},
+      {"metric": "身体状态", "value": "感冒持续未愈", "note": "恢复优先级高。"}
+    ]
+  },
+  "scores": {
+    "titan_daily_score": null
+  },
+  "daily_summary": {
+    "training": "Sick Rest，原计划 Push，实际 Rest，0 工作组。感冒持续未愈，恢复优先。",
+    "diet": "全天实际摄入为早餐 + 1 根 20 g 蛋白质蛋白棒。午餐未吃，原因是直接去实验室工作；晚餐未吃，原因是实验一直做到晚上。",
+    "sleep": "实际睡眠 5h52m，效率 94%，评分 81。睡眠效率尚可，但时长不足。",
+    "body": "空腹体重 71.2 kg，腹围未测。身体状态为感冒持续未愈。",
+    "scores": "最终 Daily Log 未提供 TITAN Daily Score，本次不补造分数。",
+    "tomorrow": "今天低摄入不需要今晚强行补齐，但明天必须恢复正常三餐；感冒期间不能再出现午餐和晚餐全部跳过。"
+  },
+  "discovery": {
+    "training": "今日训练按 Sick Rest 记录，不把原计划 Push 标记为完成。",
+    "diet": "饮食明显不足，主要问题是午餐和晚餐全部跳过；碳水和总能量尤其不足。",
+    "body": "感冒持续未愈时，低摄入会影响恢复和后续训练表现。",
+    "working_weight": "Working Weight Database 今日不更新。"
+  },
+  "notes": "2026-08-10 最终 Daily Log 已锁定：Week05 Day1，Sick Rest，全天实际摄入为早餐 + 1 根蛋白棒，不生成图片。"
+}
