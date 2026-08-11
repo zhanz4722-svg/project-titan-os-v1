@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "date": "2026-08-11",
+    "week": "Week05",
+    "day": "Day2",
+    "version": "3.1",
+    "timezone": "Europe/Berlin"
+  },
+  "audit_status": "FINAL_DAILY_LOG_LOCKED_NO_RENDER",
+  "morning_check": {
+    "weight_kg": null,
+    "waist_cm": null,
+    "training_readiness": null,
+    "muscle_recovery": "感冒恢复期，咳嗽和鼻塞仍存在，恢复优先。",
+    "stomach_status": null,
+    "mental_status": "今日取消原计划 Pull，记录为 Sick Rest。",
+    "missing_reason": "空腹体重与腹围今日未提供"
+  },
+  "sleep": {
+    "time_in_bed_minutes": 403,
+    "sleep_minutes": 361,
+    "sleep_latency_minutes": null,
+    "efficiency_percent": 89,
+    "score": 61,
+    "heart_rate_bpm": 64,
+    "respiratory_rate": 14,
+    "deep_minutes": 100,
+    "light_minutes": 171,
+    "rem_minutes": 90,
+    "awakenings": 3,
+    "awake_minutes": 35,
+    "quality": "时长不足，夜间清醒偏多",
+    "deep_status": "28%",
+    "light_status": "47%",
+    "rem_status": "25%",
+    "heart_rate_status": "感冒期偏高",
+    "respiratory_rate_status": "正常"
+  },
+  "meals": {
+    "breakfast": [
+      {"food": "Lidl 奶酪碱水结", "quantity": "1 个"},
+      {"food": "芝麻圈", "quantity": "1 个"},
+      {"food": "水煮蛋", "quantity": "2 个"},
+      {"food": "鸡肉火腿片", "quantity": "50 g"},
+      {"food": "蓝莓", "quantity": "250 g"},
+      {"food": "Milbona High Protein Drink", "quantity": "1 瓶（35 g 蛋白质）"},
+      {"food": "黄瓜", "quantity": "2 根"}
+    ],
+    "lunch": [
+      {"food": "生米", "quantity": "150 g"},
+      {"food": "白菜", "quantity": "250 g"},
+      {"food": "去皮去骨鸡腿肉", "quantity": "450 g"}
+    ],
+    "dinner": [
+      {"food": "桃子", "quantity": "1 个"},
+      {"food": "小点心", "quantity": "1 块"}
+    ]
+  },
+  "snacks": [
+    {"food": "桃子", "quantity": "1 个"},
+    {"food": "小点心", "quantity": "1 块"}
+  ],
+  "meal_notes": {
+    "breakfast": "早餐按实际确认记录。Lidl 奶酪碱水结、芝麻圈的实际重量或标签未知。",
+    "lunch": "午餐按实际确认记录：生米 150 g、白菜 250 g、去皮去骨鸡腿肉 450 g。",
+    "dinner": "晚间摄入只有桃子 1 个和小点心 1 块。之前考虑的面包最终没有吃，因此不计入面包。",
+    "snacks": "桃子和小点心属于晚间/加餐摄入；为了让 Dashboard 可见，也同步列入 Dinner 面板。"
+  },
+  "training": {
+    "status": "LOCKED",
+    "type": "Sick Rest",
+    "performed": false,
+    "start_time": null,
+    "end_time": null,
+    "duration_minutes": 0,
+    "body_parts": ["恢复日"],
+    "notes": "原计划 Pull，实际取消训练，记录为 Sick Rest，0 分钟，0 工作组。Week05 连续第二个因感冒取消的训练日；不做补偿训练，也不把 Push/Pull 顺延后硬塞进剩余几天。",
+    "exercises": []
+  },
+  "training_volume": [
+    {"muscle": "恢复日", "exercise": "Sick Rest（Pull 未执行）", "working_sets": 0}
+  ],
+  "working_weight_updates": [
+    {"exercise": "Pull", "today_weight": "未执行", "today_performance": "Sick Rest，0 工作组", "next_plan": "下一次恢复训练时，根据当日症状和睡眠决定从哪个训练模块重新启动"}
+  ],
+  "nutrition": {
+    "estimated": true,
+    "calories_kcal": 2750,
+    "protein_g": 187.5,
+    "carbs_g": null,
+    "fat_g": null,
+    "ranges": {
+      "calories_kcal": [2500, 3000],
+      "protein_g": [175, 200]
+    },
+    "targets": {"calories_kcal": 3000, "protein_g": 180, "carbs_g": 350, "fat_g": 70},
+    "note": "由于奶酪碱水结、芝麻圈、小点心的实际重量或标签未知，加上鸡腿肉及烹调油存在误差，今天只记录可信区间：约 2500-3000 kcal，蛋白质约 175-200 g。蛋白质充分达标；总热量可能略低于 3000 kcal 目标，但今天是生病休息日，不需要再补。"
+  },
+  "nutrition_audit": {
+    "protein_status": "蛋白质达标",
+    "calorie_status": "总热量基本可接受，可能略低于 3000 kcal 目标",
+    "conclusion": "今天是 Sick Rest，营养重点是支持恢复，不需要为了追训练日目标强行补热量。"
+  },
+  "history": [
+    {"date": "2026-07-27", "weight_kg": 71.7, "waist_cm": 76.0, "sleep_minutes": 407},
+    {"date": "2026-07-28", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 419},
+    {"date": "2026-07-29", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 430},
+    {"date": "2026-07-31", "weight_kg": 71.0, "waist_cm": 76.0, "sleep_minutes": 380},
+    {"date": "2026-08-01", "weight_kg": null, "waist_cm": null, "sleep_minutes": 370},
+    {"date": "2026-08-02", "weight_kg": 71.2, "waist_cm": 76.0, "sleep_minutes": 405},
+    {"date": "2026-08-03", "weight_kg": 71.8, "waist_cm": 76.0, "sleep_minutes": 430},
+    {"date": "2026-08-04", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 409},
+    {"date": "2026-08-05", "weight_kg": 71.3, "waist_cm": null, "sleep_minutes": 475},
+    {"date": "2026-08-08", "weight_kg": 71.8, "waist_cm": null, "sleep_minutes": 322},
+    {"date": "2026-08-09", "weight_kg": 71.8, "waist_cm": 76.0, "sleep_minutes": 419},
+    {"date": "2026-08-10", "weight_kg": 71.2, "waist_cm": null, "sleep_minutes": 352},
+    {"date": "2026-08-11", "weight_kg": null, "waist_cm": null, "sleep_minutes": 361}
+  ],
+  "database_progress": {
+    "Sleep": "LOCKED",
+    "Morning Check": "PARTIAL",
+    "Breakfast": "LOCKED",
+    "Lunch": "LOCKED",
+    "Training": "LOCKED",
+    "Dinner": "LOCKED",
+    "Daily Summary": "LOCKED"
+  },
+  "recovery_index": {
+    "status": "AUDIT",
+    "note": "Sick Rest 合理；蛋白达标，总热量基本可接受；睡眠 6h01m 且感冒未完全恢复，今晚睡眠是最高优先级。",
+    "rows": [
+      {"metric": "训练", "value": "Sick Rest", "note": "原计划 Pull，实际 0 分钟，0 工作组。"},
+      {"metric": "饮食", "value": "蛋白达标", "note": "约 2500-3000 kcal，蛋白质约 175-200 g；未知食物不做假精确估算。"},
+      {"metric": "睡眠", "value": "6h01m / 61分", "note": "卧床 6h43m，效率 89%，夜间清醒 3 次 / 35 min。"},
+      {"metric": "身体状态", "value": "感冒未完全恢复", "note": "鼻涕减少、鼻塞加重、咽部干痒，并出现干痒诱发的阵发性猛烈咳嗽。"}
+    ]
+  },
+  "scores": {
+    "titan_daily_score": null
+  },
+  "daily_summary": {
+    "training": "Planned Pull → Sick Rest。今日无训练，0 分钟，0 工作组；Week05 连续第二个因感冒取消的训练日。",
+    "diet": "早餐、午餐和晚间加餐均已按实际确认记录。全天估算约 2500-3000 kcal，蛋白质约 175-200 g；之前考虑的面包最终没有吃，因此不计入。",
+    "sleep": "实际睡眠 6h01m，卧床 6h43m，效率 89%，评分 61；REM 1h30m（25%），浅睡 2h51m（47%），深睡 1h40m（28%），夜间清醒 3 次 / 35 min。",
+    "body": "空腹体重和腹围今日未提供。感冒恢复期仍有鼻塞、咽部干痒和阵发性猛烈咳嗽。",
+    "scores": "今日判定：Nutrition 绿/黄，Training Sick Rest 合理取消，Recovery 黄，Health 黄；最终 Daily Score 未提供，本次不补造分数。",
+    "tomorrow": "不做补偿训练，也不把 Push/Pull 顺延后硬塞进剩余几天。下一次恢复训练时，根据当日症状和睡眠决定从哪个训练模块重新启动；今晚目标是真正睡够 7-8 小时。"
+  },
+  "discovery": {
+    "training": "连续第二个 Sick Rest 日，核心不是追回训练，而是等症状和睡眠恢复后再重启训练模块。",
+    "diet": "蛋白质充分达标；总热量可能略低于训练日目标，但生病休息日不需要再补。",
+    "body": "鼻涕减少但鼻塞加重，咽部干痒并诱发猛烈咳嗽，说明感冒未完全恢复。",
+    "working_weight": "Working Weight Database 今日不更新。"
+  },
+  "notes": "2026-08-11 最终 Daily Log 已锁定：Week05 Day2，Sick Rest，0 分钟，0 工作组；暂不生成图片，等待后续明确授权再推送或触发 GitHub Actions。"
+}
