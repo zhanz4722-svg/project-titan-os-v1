@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "date": "2026-08-12",
+    "week": "Week05",
+    "day": "Day3",
+    "version": "3.1",
+    "timezone": "Europe/Berlin"
+  },
+  "audit_status": "FINAL_DAILY_LOG_LOCKED_NO_RENDER",
+  "morning_check": {
+    "weight_kg": 70.8,
+    "waist_cm": 76.0,
+    "training_readiness": null,
+    "muscle_recovery": "比前两天恢复得明显更完整，感冒继续恢复。",
+    "stomach_status": null,
+    "mental_status": "今天正式按休息日记录，不补前面因感冒缺失的训练。",
+    "missing_reason": null
+  },
+  "sleep": {
+    "time_in_bed_minutes": 460,
+    "sleep_minutes": 441,
+    "sleep_latency_minutes": null,
+    "efficiency_percent": 95,
+    "score": 83,
+    "heart_rate_bpm": 60,
+    "respiratory_rate": 13,
+    "deep_minutes": 172,
+    "light_minutes": 149,
+    "rem_minutes": 120,
+    "awakenings": 0,
+    "awake_minutes": 0,
+    "quality": "睡眠回升，恢复明显改善",
+    "deep_status": "39%",
+    "light_status": "34%",
+    "rem_status": "27%",
+    "heart_rate_status": "恢复期正常",
+    "respiratory_rate_status": "正常"
+  },
+  "meals": {
+    "breakfast": [
+      {"food": "黑面包", "quantity": "200 g"},
+      {"food": "水煮蛋", "quantity": "2 个"},
+      {"food": "坚果", "quantity": "10 g"},
+      {"food": "彩椒", "quantity": "1 个"},
+      {"food": "黄瓜", "quantity": "1 根"},
+      {"food": "鸡肉火腿片", "quantity": "50 g"},
+      {"food": "高蛋白奶昔", "quantity": "350 mL（35 g 蛋白质）"},
+      {"food": "冷萃黑咖啡", "quantity": "390 mL"}
+    ],
+    "lunch": [
+      {"food": "生米", "quantity": "150 g"},
+      {"food": "炒空心菜", "quantity": "200 g"},
+      {"food": "烫青菜", "quantity": "250 g"},
+      {"food": "盐水去皮去骨鸡腿肉", "quantity": "350 g"}
+    ],
+    "dinner": [
+      {"food": "空气炸锅土豆", "quantity": "400 g"},
+      {"food": "香蕉", "quantity": "2 根"},
+      {"food": "脆桃", "quantity": "1 个"}
+    ]
+  },
+  "meal_notes": {
+    "breakfast": "早餐估算约 1000-1100 kcal，蛋白质约 80-85 g。",
+    "lunch": "午餐包含 150 g 生米、200 g 炒空心菜、250 g 烫青菜、350 g 盐水去皮去骨鸡腿肉；考虑炒菜用油后估算约 1200-1350 kcal，蛋白质约 84-94 g。",
+    "dinner": "晚餐为 400 g 空气炸锅土豆、2 根香蕉、1 个脆桃；估算约 570-660 kcal，蛋白质约 10 g，碳水约 140-155 g。"
+  },
+  "training": {
+    "status": "LOCKED",
+    "type": "Rest & Recovery Day",
+    "performed": false,
+    "start_time": null,
+    "end_time": null,
+    "duration_minutes": 0,
+    "body_parts": ["恢复日"],
+    "notes": "今天正式按休息日记录，不补前面因感冒缺失的训练。REST 完成，0 工作组。",
+    "exercises": []
+  },
+  "training_volume": [
+    {"muscle": "恢复日", "exercise": "Rest & Recovery Day", "working_sets": 0}
+  ],
+  "working_weight_updates": [
+    {"exercise": "Rest & Recovery Day", "today_weight": "未执行", "today_performance": "REST，0 工作组", "next_plan": "不补前面因感冒缺失的训练；恢复正常后再按状态选择训练模块"}
+  ],
+  "nutrition": {
+    "estimated": true,
+    "calories_kcal": 2940,
+    "protein_g": 182.5,
+    "carbs_g": 395,
+    "fat_g": null,
+    "ranges": {
+      "calories_kcal": [2770, 3110],
+      "protein_g": [175, 190],
+      "carbs_g": [380, 410]
+    },
+    "targets": {"calories_kcal": 3000, "protein_g": 180, "carbs_g": 350, "fat_g": 70},
+    "note": "全天估算约 2770-3110 kcal，蛋白质约 175-190 g，碳水约 380-410 g。今天是标准恢复日：总能量、蛋白质和碳水已恢复正常，蔬菜水果充足。暂时不因 70.8 kg 单点体重修改 3000 kcal 基线。"
+  },
+  "nutrition_audit": {
+    "calorie_status": "接近 3000 kcal 目标",
+    "protein_status": "蛋白质达标",
+    "carb_status": "碳水充足",
+    "vegetable_fruit_status": "蔬菜水果很充足",
+    "conclusion": "前几天最大问题是生病和实验忙导致漏餐；今天已经重新把总能量、蛋白质和碳水拉回正常水平。"
+  },
+  "history": [
+    {"date": "2026-07-27", "weight_kg": 71.7, "waist_cm": 76.0, "sleep_minutes": 407},
+    {"date": "2026-07-28", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 419},
+    {"date": "2026-07-29", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 430},
+    {"date": "2026-07-31", "weight_kg": 71.0, "waist_cm": 76.0, "sleep_minutes": 380},
+    {"date": "2026-08-01", "weight_kg": null, "waist_cm": null, "sleep_minutes": 370},
+    {"date": "2026-08-02", "weight_kg": 71.2, "waist_cm": 76.0, "sleep_minutes": 405},
+    {"date": "2026-08-03", "weight_kg": 71.8, "waist_cm": 76.0, "sleep_minutes": 430},
+    {"date": "2026-08-04", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 409},
+    {"date": "2026-08-05", "weight_kg": 71.3, "waist_cm": null, "sleep_minutes": 475},
+    {"date": "2026-08-08", "weight_kg": 71.8, "waist_cm": null, "sleep_minutes": 322},
+    {"date": "2026-08-09", "weight_kg": 71.8, "waist_cm": 76.0, "sleep_minutes": 419},
+    {"date": "2026-08-10", "weight_kg": 71.2, "waist_cm": null, "sleep_minutes": 352},
+    {"date": "2026-08-11", "weight_kg": null, "waist_cm": null, "sleep_minutes": 361},
+    {"date": "2026-08-12", "weight_kg": 70.8, "waist_cm": 76.0, "sleep_minutes": 441}
+  ],
+  "database_progress": {
+    "Sleep": "LOCKED",
+    "Morning Check": "LOCKED",
+    "Breakfast": "LOCKED",
+    "Lunch": "LOCKED",
+    "Training": "LOCKED",
+    "Dinner": "LOCKED",
+    "Daily Summary": "LOCKED"
+  },
+  "recovery_index": {
+    "status": "LOCKED",
+    "note": "REST 完成，营养达标，睡眠恢复，腹围稳定，感冒继续恢复。",
+    "rows": [
+      {"metric": "训练", "value": "REST", "note": "休息日，0 工作组；不补前面因感冒缺失的训练。"},
+      {"metric": "饮食", "value": "达标", "note": "约 2770-3110 kcal，蛋白质约 175-190 g，碳水约 380-410 g。"},
+      {"metric": "睡眠", "value": "7h21m / 83分", "note": "卧床 7h40m，效率 95%，夜间清醒 0 次。"},
+      {"metric": "身体状态", "value": "恢复更完整", "note": "体重 70.8 kg，腹围 76.0 cm；单日体重回落更像糖原、水分和胃肠内容物变化。"}
+    ]
+  },
+  "scores": {
+    "titan_daily_score": null
+  },
+  "daily_summary": {
+    "training": "今天正式按休息日记录，不补前面因感冒缺失的训练。REST 完成，0 工作组。",
+    "diet": "早餐、午餐、晚餐均已恢复正常摄入。全天估算约 2770-3110 kcal，蛋白质约 175-190 g，碳水约 380-410 g；蔬菜水果很充足。",
+    "sleep": "实际睡眠 7h21m，卧床 7h40m，效率 95%，评分 83；REM 2h00（27%），浅睡 2h29（34%），深睡 2h52（39%），夜间清醒 0 次。",
+    "body": "空腹体重 70.8 kg，空腹腹围 76.0 cm。体重从近期 71 kg 以上回落，但腹围稳定，暂时不修改热量目标。",
+    "scores": "今日最终状态：REST 完成、营养达标、睡眠恢复、腹围稳定、感冒继续恢复；本次不补造 TITAN Daily Score。",
+    "tomorrow": "继续观察体重趋势，而不是 70.8 kg 单点。如果恢复正常饮食以后周均体重仍持续跌破 71 kg，再考虑提高热量；现在不调整 3000 kcal 基线。"
+  },
+  "discovery": {
+    "training": "今天明确不补前面因感冒缺失的训练，按 Rest & Recovery Day 完整记录。",
+    "diet": "前几天漏餐问题已经纠正，今天总能量、蛋白质和碳水重新回到正常水平。",
+    "body": "体重 70.8 kg 但腹围 76.0 cm 稳定，更像短期糖原、水分和胃肠内容物变化。",
+    "working_weight": "Working Weight Database 今日不更新。"
+  },
+  "notes": "2026-08-12 最终 Daily Log 已锁定：Rest & Recovery Day，REST 完成，营养达标，睡眠恢复，腹围稳定；暂不生成图片，等待后续明确授权再推送或触发 GitHub Actions。"
+}
