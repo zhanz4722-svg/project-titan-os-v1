@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "date": "2026-08-13",
+    "week": "Week05",
+    "day": "Day4",
+    "version": "3.1",
+    "timezone": "Europe/Berlin"
+  },
+  "audit_status": "FINAL_DAILY_LOG_LOCKED_NO_RENDER",
+  "morning_check": {
+    "weight_kg": 71.4,
+    "waist_cm": 76.0,
+    "training_readiness": null,
+    "muscle_recovery": "感冒仍未恢复，叠加严重睡眠不足，今日按恢复优先处理。",
+    "stomach_status": null,
+    "mental_status": "今天取消训练，不执行重量升级测试，也不把缺失容量补到后面。",
+    "missing_reason": null
+  },
+  "sleep": {
+    "time_in_bed_minutes": 263,
+    "sleep_minutes": 256,
+    "sleep_latency_minutes": null,
+    "efficiency_percent": 97,
+    "score": 55,
+    "heart_rate_bpm": 59,
+    "respiratory_rate": 13,
+    "deep_minutes": 78,
+    "light_minutes": 135,
+    "rem_minutes": 43,
+    "awakenings": null,
+    "awake_minutes": 3,
+    "quality": "结构和效率尚可，但总时长严重不足",
+    "deep_status": "30%",
+    "light_status": "53%",
+    "rem_status": "17%",
+    "heart_rate_status": "正常",
+    "respiratory_rate_status": "正常"
+  },
+  "meals": {
+    "breakfast": [
+      {"food": "黑面包", "quantity": "200 g"},
+      {"food": "车厘子", "quantity": "100 g"},
+      {"food": "黄瓜", "quantity": "100 g"},
+      {"food": "彩椒/青椒", "quantity": "150 g"},
+      {"food": "鸡肉火腿片", "quantity": "50 g"},
+      {"food": "煎蛋", "quantity": "2 个"},
+      {"food": "高蛋白奶昔", "quantity": "1 瓶（35 g 蛋白）"},
+      {"food": "黑咖啡", "quantity": "500 mL"}
+    ],
+    "lunch": [
+      {"food": "生米", "quantity": "100 g"},
+      {"food": "凉拌菠菜", "quantity": "200 g"},
+      {"food": "韭菜", "quantity": "200 g"},
+      {"food": "鸡蛋", "quantity": "4 个"},
+      {"food": "去骨去皮鸡腿肉", "quantity": "250 g"}
+    ],
+    "dinner": [
+      {"food": "香蕉", "quantity": "2 根"},
+      {"food": "脆桃", "quantity": "2 个"},
+      {"food": "蛋白棒", "quantity": "50 g（20 g 蛋白，7 g 脂肪，15 g 碳水，0.28 g 盐）"}
+    ]
+  },
+  "meal_notes": {
+    "breakfast": "早餐估算约 1000-1100 kcal，蛋白质约 78-85 g。",
+    "lunch": "午餐估算约 1100-1200 kcal，蛋白质约 100-110 g；炒菜和凉拌实际用油量是最大误差来源。",
+    "dinner": "晚餐估算约 500-600 kcal，蛋白质约 23-25 g。蛋白棒标签：20 g 蛋白质，7 g 脂肪，4.4 g 饱和脂肪，15 g 碳水，其中糖 1.5 g、代糖 12 g，盐 0.28 g。"
+  },
+  "training": {
+    "status": "LOCKED",
+    "type": "Illness Recovery Rest Day",
+    "performed": false,
+    "start_time": null,
+    "end_time": null,
+    "duration_minutes": 0,
+    "body_parts": ["恢复日"],
+    "notes": "感冒尚未恢复，且实际睡眠仅 4h16min，今日记录为 REST / Illness Recovery Day，0 工作组。原计划肩部 Progression Test 全部延期，不算失败；不把缺失容量补到后面。",
+    "exercises": []
+  },
+  "training_volume": [
+    {"muscle": "恢复日", "exercise": "Illness Recovery Rest Day", "working_sets": 0}
+  ],
+  "working_weight_updates": [
+    {"exercise": "肩部 Progression Test", "today_weight": "未执行", "today_performance": "REST，0 工作组", "next_plan": "7 kg 侧平举测试、18 kg 哑铃肩推测试、反向蝴蝶机升级测试全部延期；恢复后再重新评估"}
+  ],
+  "nutrition": {
+    "estimated": true,
+    "calories_kcal": 2800,
+    "protein_g": 212.5,
+    "carbs_g": 315,
+    "fat_g": 75,
+    "ranges": {
+      "calories_kcal": [2700, 2900],
+      "protein_g": [205, 220],
+      "carbs_g": [300, 330],
+      "fat_g": [70, 80]
+    },
+    "targets": {"calories_kcal": 3000, "protein_g": 180, "carbs_g": 350, "fat_g": 70},
+    "note": "考虑食品品牌、鸡腿肉实际脂肪以及烹饪油误差，今天按范围记录：热量约 2700-2900 kcal，蛋白质约 205-220 g，碳水约 300-330 g，脂肪约 70-80 g。蛋白质充足且明显超过目标；脂肪基本合适；碳水略低于训练日目标但休息日可接受；总热量可能低于 3000 kcal 目标 100-300 kcal，不需要临睡前硬补。"
+  },
+  "nutrition_audit": {
+    "calorie_status": "略低于 3000 kcal 目标，但感冒恢复日可接受",
+    "protein_status": "充足，明显超过 180 g 目标",
+    "carb_status": "略低于训练日目标，休息日可接受",
+    "fat_status": "基本合适",
+    "conclusion": "身体组成数据稳定，营养完成度良好；今天最大的恢复瓶颈是感冒未愈和严重睡眠不足。"
+  },
+  "history": [
+    {"date": "2026-07-27", "weight_kg": 71.7, "waist_cm": 76.0, "sleep_minutes": 407},
+    {"date": "2026-07-28", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 419},
+    {"date": "2026-07-29", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 430},
+    {"date": "2026-07-31", "weight_kg": 71.0, "waist_cm": 76.0, "sleep_minutes": 380},
+    {"date": "2026-08-01", "weight_kg": null, "waist_cm": null, "sleep_minutes": 370},
+    {"date": "2026-08-02", "weight_kg": 71.2, "waist_cm": 76.0, "sleep_minutes": 405},
+    {"date": "2026-08-03", "weight_kg": 71.8, "waist_cm": 76.0, "sleep_minutes": 430},
+    {"date": "2026-08-04", "weight_kg": 71.1, "waist_cm": 76.0, "sleep_minutes": 409},
+    {"date": "2026-08-05", "weight_kg": 71.3, "waist_cm": null, "sleep_minutes": 475},
+    {"date": "2026-08-08", "weight_kg": 71.8, "waist_cm": null, "sleep_minutes": 322},
+    {"date": "2026-08-09", "weight_kg": 71.8, "waist_cm": 76.0, "sleep_minutes": 419},
+    {"date": "2026-08-10", "weight_kg": 71.2, "waist_cm": null, "sleep_minutes": 352},
+    {"date": "2026-08-11", "weight_kg": null, "waist_cm": null, "sleep_minutes": 361},
+    {"date": "2026-08-12", "weight_kg": 70.8, "waist_cm": 76.0, "sleep_minutes": 441},
+    {"date": "2026-08-13", "weight_kg": 71.4, "waist_cm": 76.0, "sleep_minutes": 256}
+  ],
+  "database_progress": {
+    "Sleep": "LOCKED",
+    "Morning Check": "LOCKED",
+    "Breakfast": "LOCKED",
+    "Lunch": "LOCKED",
+    "Training": "LOCKED",
+    "Dinner": "LOCKED",
+    "Daily Summary": "LOCKED"
+  },
+  "recovery_index": {
+    "status": "LOCKED",
+    "note": "身体组成数据稳定，营养完成度良好；恢复瓶颈是感冒未愈和严重睡眠不足。",
+    "rows": [
+      {"metric": "训练", "value": "REST", "note": "Illness Recovery Rest Day，0 工作组；肩部升级测试全部延期，不算失败。"},
+      {"metric": "饮食", "value": "总体良好", "note": "约 2700-2900 kcal，蛋白质约 205-220 g，碳水约 300-330 g，脂肪约 70-80 g。"},
+      {"metric": "睡眠", "value": "4h16m / 55分", "note": "效率 97%，结构尚可，但总时长严重不足。"},
+      {"metric": "身体状态", "value": "感冒未恢复", "note": "体重 71.4 kg，腹围 76.0 cm；不调整增肌热量目标。"}
+    ]
+  },
+  "scores": {
+    "titan_daily_score": null
+  },
+  "daily_summary": {
+    "training": "REST / Illness Recovery Day，0 工作组。感冒尚未恢复，且仅睡 4h16min，今日取消训练是正确记录，不定义为漏练。",
+    "diet": "三餐已完整记录。全天估算约 2700-2900 kcal，蛋白质约 205-220 g，碳水约 300-330 g，脂肪约 70-80 g；总热量略低于训练日目标但不需要硬补。",
+    "sleep": "实际睡眠 4h16min，卧床 4h23min，效率 97%，评分 55；REM 43min（17%），浅睡 2h15min（53%），深睡 1h18min（30%），清醒 3min。",
+    "body": "空腹体重 71.4 kg，空腹腹围 76.0 cm。体重仍维持在 71 kg 以上，腹围稳定，没有因为体重变化调整增肌热量的理由。",
+    "scores": "今日 TITAN 判断：身体组成数据稳定，营养完成度良好；最大恢复瓶颈是感冒未愈和严重睡眠不足。本次不补造 TITAN Daily Score。",
+    "tomorrow": "今晚优先把睡眠拉回来。如果明早感冒仍明显存在，即使睡够了，也不急着做升级测试。"
+  },
+  "discovery": {
+    "training": "原计划肩部 Progression Test 全部延期，包括 7 kg 侧平举、18 kg 哑铃肩推和反向蝴蝶机升级测试；延期不算失败。",
+    "diet": "蛋白质充足且明显超过目标；碳水略低于训练日目标，但休息恢复日可接受。",
+    "body": "体重 71.4 kg 且腹围 76.0 cm，身体组成数据稳定，不需要调整 3000 kcal 基线。",
+    "working_weight": "Working Weight Database 今日不更新。"
+  },
+  "notes": "2026-08-13 最终 Daily Log 已锁定：REST / Illness Recovery Day，感冒未恢复且严重睡眠不足，0 工作组；三餐完整记录，暂不生成图片，等待后续明确授权再推送或触发 GitHub Actions。"
+}
