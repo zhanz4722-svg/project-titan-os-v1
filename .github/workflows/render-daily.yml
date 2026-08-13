@@ -9,6 +9,7 @@ on:
         type: string
   push:
     paths:
+      - "data/*.json"
       - "data/**/*.json"
       - "schema/**"
       - "dashboard/**"
@@ -40,24 +41,46 @@ jobs:
           python -m playwright install --with-deps chromium
 
       - name: Validate and render dashboards
+        id: render_daily
         shell: bash
         env:
           DATA_FILE: ${{ github.event_name == 'workflow_dispatch' && inputs.data_file || '' }}
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
         run: |
           set -euo pipefail
           if [ -n "$DATA_FILE" ]; then
             files="$DATA_FILE"
+          elif [ "$EVENT_NAME" = "push" ]; then
+            if [ "$BEFORE_SHA" = "0000000000000000000000000000000000000000" ]; then
+              files="$(git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" -- 'data/*.json' | sort)"
+            else
+              files="$(git diff --name-only "$BEFORE_SHA" "$GITHUB_SHA" -- 'data/*.json' | sort)"
+            fi
           else
-            files="$(find data -maxdepth 1 -name '*.json' | sort)"
+            files="$(find data -maxdepth 1 -name '*.json' | sort | tail -n 1)"
           fi
 
+          if [ -z "$files" ]; then
+            echo "No daily JSON files selected for rendering."
+            : > /tmp/project-titan-rendered-files.txt
+            echo "rendered=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "rendered=true" >> "$GITHUB_OUTPUT"
+          : > /tmp/project-titan-rendered-files.txt
           for file in $files; do
             echo "Rendering $file"
             python engine/validate.py "$file"
             python engine/render.py "$file"
+            date="$(python -c 'import json,sys; print(json.load(open(sys.argv[1], encoding="utf-8"))["meta"]["date"])' "$file")"
+            printf 'output/png/PROJECT_TITAN_%s.png\n' "$date" >> /tmp/project-titan-rendered-files.txt
+            printf 'output/pdf/PROJECT_TITAN_%s.pdf\n' "$date" >> /tmp/project-titan-rendered-files.txt
           done
 
       - name: Upload rendered outputs
+        if: steps.render_daily.outputs.rendered == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: project-titan-rendered-output
@@ -66,13 +89,17 @@ jobs:
             output/pdf/*.pdf
 
       - name: Commit rendered outputs
+        if: steps.render_daily.outputs.rendered == 'true'
         shell: bash
         run: |
           set -euo pipefail
-          if [ -n "$(git status --porcelain output)" ]; then
+          if [ -s /tmp/project-titan-rendered-files.txt ]; then
+            xargs git add -- < /tmp/project-titan-rendered-files.txt
+          fi
+
+          if ! git diff --cached --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add output/png output/pdf
             git commit -m "Render PROJECT TITAN daily outputs"
             git push
           else
